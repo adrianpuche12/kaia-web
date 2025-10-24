@@ -6,10 +6,10 @@ const Changelog = () => {
     <section id="changelog" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Roadmap y Actualizaciones
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Conoce las últimas actualizaciones y lo que viene próximamente
           </p>
         </div>
@@ -46,10 +46,10 @@ const Changelog = () => {
                     {/* Header */}
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-foreground">
+                        <h3 className="text-xl font-bold text-gray-900">
                           {version.version} - {version.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-gray-600">
                           {version.date}
                         </p>
                       </div>
@@ -71,7 +71,7 @@ const Changelog = () => {
                       {version.features.map((feature, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start text-sm text-muted-foreground"
+                          className="flex items-start text-sm text-gray-700"
                         >
                           <svg
                             className={`w-5 h-5 mr-2 flex-shrink-0 ${
@@ -111,7 +111,7 @@ const Changelog = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
+            <p className="text-gray-600 mb-4">
               ¿Quieres saber más sobre nuestro roadmap completo?
             </p>
             <a

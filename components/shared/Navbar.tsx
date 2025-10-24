@@ -58,7 +58,7 @@ const Navbar = () => {
             </span>
             <span
               className={`ml-2 text-sm hidden sm:inline transition-colors ${
-                isScrolled ? 'text-muted-foreground' : 'text-white/80'
+                isScrolled ? 'text-gray-600' : 'text-white/80'
               }`}
             >
               Su asistente ideal
@@ -72,7 +72,7 @@ const Navbar = () => {
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isScrolled ? 'text-foreground' : 'text-white'
+                  isScrolled ? 'text-gray-900' : 'text-white'
                 }`}
               >
                 {link.label}
@@ -127,7 +127,7 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-900 hover:bg-muted transition-colors"
               >
                 {link.label}
               </button>

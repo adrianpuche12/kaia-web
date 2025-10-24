@@ -14,10 +14,10 @@ const FAQSection = () => {
     <section id="faq" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Preguntas frecuentes
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Todo lo que necesitas saber sobre Kaia
           </p>
         </div>
@@ -32,7 +32,7 @@ const FAQSection = () => {
                 onClick={() => toggleQuestion(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-muted/50 transition-colors"
               >
-                <span className="font-semibold text-foreground pr-8">
+                <span className="font-semibold text-gray-900 pr-8">
                   {item.question}
                 </span>
                 <svg
@@ -53,7 +53,7 @@ const FAQSection = () => {
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-4 text-muted-foreground">
+                <div className="px-6 pb-4 text-gray-700">
                   {item.answer}
                 </div>
               )}
@@ -62,7 +62,7 @@ const FAQSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-4">
+          <p className="text-gray-600 mb-4">
             ¿No encontraste lo que buscabas?
           </p>
           <a

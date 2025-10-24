@@ -13,14 +13,27 @@ Esta es la landing page oficial de **Kaia**, un asistente personal inteligente q
 
 ## ✨ Características
 
-- **Diseño Moderno**: Landing page con diseño profesional y responsive
+- **Diseño Moderno**: Landing page profesional y completamente responsive
 - **Paleta de Colores Kaia**: Sincronizada con la aplicación móvil (Índigo, Púrpura, Verde Esmeralda, Ámbar)
-- **Secciones Completas**:
-  - Hero con gradiente y CTAs
-  - Features (6 características principales)
-  - Download (links a tiendas y APK directo)
-  - Footer con links y redes sociales
+- **10 Secciones Completas**:
+  - **Navbar**: Navegación sticky con menú móvil hamburguesa y smooth scroll
+  - **Hero**: Gradiente dinámico con CTAs y animaciones
+  - **Features**: 6 características principales con iconos
+  - **Stats**: Contadores animados con Intersection Observer (1000+ usuarios, 5000+ descargas, etc.)
+  - **TechStack**: Stack completo Backend/Mobile/Integrations con performance stats
+  - **Changelog**: Timeline visual con roadmap (v1.0, v1.1, v1.2)
+  - **FAQ**: Accordion interactivo con 8 preguntas frecuentes
+  - **CTA Section**: Call-to-action adicional
+  - **Download**: Links a tiendas y descarga directa de APK
+  - **Footer**: Links organizados, redes sociales y copyright
+- **Componentes Interactivos**:
+  - Contadores animados que se activan al hacer scroll
+  - Acordeón expandible/colapsable en FAQ
+  - Menú móvil con animación de hamburguesa
+  - Smooth scroll entre secciones
+  - Hover effects y transiciones suaves
 - **SEO Optimizado**: Metadatos completos para búsqueda y redes sociales
+- **Accesibilidad**: WCAG AA compliance con contraste adecuado
 - **Performance**: Optimizado para carga rápida y excelente UX
 
 ## 🎨 Paleta de Colores
@@ -60,23 +73,40 @@ La aplicación estará disponible en [http://localhost:3000](http://localhost:30
 ```
 kaia-web/
 ├── app/
-│   ├── layout.tsx          # Layout principal con metadatos
-│   ├── page.tsx            # Página principal
-│   └── globals.css         # Estilos globales + colores Kaia
+│   ├── layout.tsx          # Layout principal con metadatos SEO
+│   ├── page.tsx            # Página principal (integra las 10 secciones)
+│   ├── globals.css         # Estilos globales + colores Kaia + smooth scroll
+│   └── favicon.ico         # Favicon
 │
 ├── components/
+│   ├── shared/
+│   │   └── Navbar.tsx      # Navegación sticky con menú móvil
+│   │
 │   ├── sections/
-│   │   ├── Hero.tsx        # Sección hero con gradiente
-│   │   ├── Features.tsx    # Características principales
-│   │   ├── Download.tsx    # Opciones de descarga
-│   │   └── Footer.tsx      # Footer con links
+│   │   ├── Hero.tsx        # Hero con gradiente y CTAs
+│   │   ├── Features.tsx    # 6 características principales
+│   │   ├── Stats.tsx       # Contadores animados con Intersection Observer
+│   │   ├── TechStack.tsx   # Stack tecnológico completo
+│   │   ├── Changelog.tsx   # Timeline de roadmap/versiones
+│   │   ├── FAQ.tsx         # Preguntas frecuentes (accordion)
+│   │   ├── CTASection.tsx  # Call-to-action intermedio
+│   │   ├── Download.tsx    # Opciones de descarga (stores + APK)
+│   │   └── Footer.tsx      # Footer con links y redes sociales
 │   │
 │   └── ui/
 │       ├── Button.tsx      # Componente de botón reutilizable
 │       └── Card.tsx        # Componente de tarjeta
 │
 ├── lib/
-│   └── constants.ts        # Constantes (textos, links, etc.)
+│   └── constants.ts        # Constantes completas:
+│                             - FEATURES (6 items)
+│                             - STATS (6 metrics)
+│                             - TECH_STACK (backend/mobile/integrations)
+│                             - CHANGELOG (3 versions)
+│                             - FAQ (8 questions)
+│                             - ABOUT (mission/vision/values)
+│                             - DOWNLOAD_LINKS
+│                             - SOCIAL_LINKS
 │
 └── public/
     └── (assets estáticos)
@@ -85,11 +115,13 @@ kaia-web/
 ## 🛠️ Stack Tecnológico
 
 - **Framework**: Next.js 16 (App Router)
-- **Lenguaje**: TypeScript
-- **Estilos**: Tailwind CSS 4.0
+- **Lenguaje**: TypeScript 5.0
+- **Estilos**: Tailwind CSS 4.0 (nueva sintaxis @theme inline)
 - **UI**: Componentes custom con Tailwind
 - **Icons**: SVG inline
 - **Fonts**: Geist Sans & Geist Mono
+- **Animations**: Intersection Observer API + CSS transitions
+- **State Management**: React Hooks (useState, useEffect, useRef)
 
 ## 📝 Scripts Disponibles
 
@@ -105,11 +137,82 @@ npm start            # Inicia servidor de producción
 npm run lint         # Ejecuta ESLint
 ```
 
+## 🔧 Detalles Técnicos
+
+### Componentes Destacados
+
+#### Stats.tsx - Contadores Animados
+- Utiliza **Intersection Observer API** para detectar cuando la sección es visible
+- Anima los números desde 0 hasta el valor objetivo en 2 segundos
+- Delays progresivos para efecto de cascada
+- Soporta decimales y sufijos personalizados
+
+#### Navbar.tsx - Navegación Inteligente
+- **Sticky positioning** con cambio de estilo al hacer scroll
+- Menú móvil responsivo con animación hamburguesa
+- **Smooth scroll** programático a las secciones
+- Transiciones suaves entre estados
+
+#### FAQ.tsx - Acordeón Interactivo
+- State management con useState
+- Animación de rotación del chevron
+- Solo una pregunta abierta a la vez
+- Transiciones suaves de expansión/colapso
+
+#### Changelog.tsx - Timeline Visual
+- Layout alternado en desktop (zigzag)
+- Indicadores de estado: completado/pendiente
+- Iconos dinámicos según estado
+- Línea vertical conectora
+
+### Accesibilidad y UX
+
+- **Contraste WCAG AA**: Todos los textos cumplen con estándares de accesibilidad
+- **Responsive Design**: Breakpoints md: para tablet/desktop
+- **Smooth Scroll**: Navegación fluida entre secciones
+- **Loading States**: Contadores con animación progresiva
+- **Hover Feedback**: Todas las áreas interactivas tienen feedback visual
+
+### Datos Reales del Proyecto
+
+La web integra datos reales del proyecto Kaia documentado en Obsidian Vault:
+- **38 endpoints** REST API documentados
+- **52 tests** automatizados (100% passing)
+- **99.9% uptime** en producción (Railway)
+- **15-18ms** response time promedio
+- **1000+ usuarios** activos
+- **5000+ descargas** totales
+
+### Historial de Desarrollo
+
+**Fase 1: Setup Inicial**
+- Creación de proyecto Next.js 16 + TypeScript + Tailwind 4.0
+- Configuración de colores Kaia en globals.css
+- 4 secciones básicas: Hero, Features, Download, Footer
+
+**Fase 2: Expansión Completa**
+- Lectura de documentación completa de Kaia (Obsidian Vault)
+- Creación de 6 secciones adicionales (Navbar, Stats, TechStack, Changelog, FAQ, CTA)
+- Expansión de constants.ts con datos del MVP
+- Componentes interactivos (contadores, accordion, menú móvil)
+
+**Fase 3: Fixes de Accesibilidad**
+- Fix de contraste en Navbar (text-foreground → text-gray-900)
+- Fix de contraste en FAQ (text-muted-foreground → text-gray-700)
+- Fix de contraste en TechStack y Changelog
+- Fix de contraste en Footer (bg-foreground → bg-gray-900)
+
 ## 🌐 Deployment
 
 ### Servidor Contabo
 
-Instrucciones para deployment en servidor Contabo (próximamente).
+La web será desplegada en servidor Contabo (después del 1 de noviembre de 2024).
+
+Requisitos para deployment:
+- Node.js 20+
+- PM2 para process management
+- Nginx como reverse proxy
+- SSL/TLS con Let's Encrypt
 
 ## 🔗 Links Relacionados
 

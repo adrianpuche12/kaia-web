@@ -6,7 +6,11 @@ import { BRAND, DOWNLOAD_LINKS } from '@/lib/constants';
 
 const Hero = () => {
   const handleDownload = () => {
-    window.open(DOWNLOAD_LINKS.apkDirect, '_blank');
+    // Navegar a la sección de releases en lugar de abrir Expo Dev
+    const releasesSection = document.getElementById('releases');
+    if (releasesSection) {
+      releasesSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

@@ -47,23 +47,112 @@ export const FEATURES = [
 
 export const STATS = [
   {
-    value: '1,000+',
+    value: 1000,
     label: 'Usuarios activos',
+    suffix: '+',
   },
   {
-    value: '5,000+',
+    value: 5000,
     label: 'Descargas totales',
-    },
-  {
-    value: '50,000+',
-    label: 'Eventos creados',
+    suffix: '+',
   },
   {
-    value: '4.8',
+    value: 50000,
+    label: 'Eventos creados',
+    suffix: '+',
+  },
+  {
+    value: 4.8,
     label: 'Rating promedio',
     suffix: '⭐',
+    decimals: 1,
+  },
+  {
+    value: 38,
+    label: 'API Endpoints',
+    suffix: '',
+  },
+  {
+    value: 99.9,
+    label: 'Uptime %',
+    suffix: '%',
+    decimals: 1,
   },
 ];
+
+export const TECH_STACK = {
+  backend: [
+    { name: 'Node.js', icon: '🟢', description: 'Runtime de JavaScript' },
+    { name: 'TypeScript', icon: '💙', description: 'Tipado estático' },
+    { name: 'Express', icon: '⚡', description: 'Framework web' },
+    { name: 'PostgreSQL', icon: '🐘', description: 'Base de datos' },
+    { name: 'Prisma', icon: '🔷', description: 'ORM' },
+    { name: 'Redis', icon: '🔴', description: 'Caché en memoria' },
+  ],
+  mobile: [
+    { name: 'React Native', icon: '⚛️', description: 'Framework móvil' },
+    { name: 'Expo', icon: '📱', description: 'Plataforma de desarrollo' },
+    { name: 'TypeScript', icon: '💙', description: 'Tipado estático' },
+    { name: 'Zustand', icon: '🐻', description: 'State management' },
+  ],
+  integrations: [
+    { name: 'Twilio', icon: '📞', description: 'SMS y WhatsApp' },
+    { name: 'SendGrid', icon: '📧', description: 'Email' },
+    { name: 'Google Maps', icon: '🗺️', description: 'Geolocalización' },
+    { name: 'Railway', icon: '🚂', description: 'Hosting' },
+  ],
+};
+
+export const CHANGELOG = [
+  {
+    version: 'v1.0',
+    date: '18 Oct 2025',
+    title: 'MVP Launch',
+    status: 'completed',
+    features: [
+      '38 endpoints funcionales',
+      '7 pantallas móviles completas',
+      'Sistema de autenticación JWT',
+      'PostgreSQL + 23 índices optimizados',
+      'Redis caché implementado',
+      '52 tests automatizados',
+      'Deployment a Railway',
+    ],
+  },
+  {
+    version: 'v1.1',
+    date: 'Nov 2025',
+    title: 'Push Notifications',
+    status: 'pending',
+    features: [
+      'Notificaciones push con Expo',
+      'Eventos recurrentes (RRULE)',
+      'Background jobs (BullMQ)',
+    ],
+  },
+  {
+    version: 'v1.2',
+    date: 'Dic 2025',
+    title: 'App Stores',
+    status: 'pending',
+    features: [
+      'Publicación en Google Play Store',
+      'Versión iOS (TestFlight)',
+      'Web dashboard MVP',
+    ],
+  },
+];
+
+export const ABOUT = {
+  mission: 'Transformar la forma en que las personas gestionan su vida diaria mediante inteligencia artificial y comandos de voz naturales.',
+  vision: 'Ser el asistente personal más intuitivo y confiable del mercado, disponible 24/7 para ayudar a millones de usuarios.',
+  values: [
+    'Privacidad primero',
+    'IA ética y transparente',
+    'Experiencia de usuario excepcional',
+    'Innovación constante',
+  ],
+};
 
 export const FAQ = [
   {

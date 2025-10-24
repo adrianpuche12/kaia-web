@@ -1,0 +1,116 @@
+import React from 'react';
+import Card from '../ui/Card';
+import { TECH_STACK } from '@/lib/constants';
+
+const TechStack = () => {
+  return (
+    <section id="tech-stack" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Tecnología de vanguardia
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Construido con las mejores herramientas y frameworks del mercado
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Backend */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-6 text-primary">
+              Backend
+            </h3>
+            <Card className="h-full">
+              <div className="space-y-4">
+                {TECH_STACK.backend.map((tech, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-2xl">{tech.icon}</span>
+                    <div>
+                      <div className="font-semibold text-foreground">
+                        {tech.name}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {tech.description}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+
+          {/* Mobile */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-6 text-secondary">
+              Mobile
+            </h3>
+            <Card className="h-full">
+              <div className="space-y-4">
+                {TECH_STACK.mobile.map((tech, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-2xl">{tech.icon}</span>
+                    <div>
+                      <div className="font-semibold text-foreground">
+                        {tech.name}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {tech.description}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+
+          {/* Integrations */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-6 text-tertiary">
+              Integraciones
+            </h3>
+            <Card className="h-full">
+              <div className="space-y-4">
+                {TECH_STACK.integrations.map((tech, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-2xl">{tech.icon}</span>
+                    <div>
+                      <div className="font-semibold text-foreground">
+                        {tech.name}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {tech.description}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Performance Stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="text-center p-6 bg-muted rounded-lg">
+            <div className="text-3xl font-bold text-primary mb-2">15-18ms</div>
+            <div className="text-sm text-muted-foreground">Response Time</div>
+          </div>
+          <div className="text-center p-6 bg-muted rounded-lg">
+            <div className="text-3xl font-bold text-secondary mb-2">99.9%</div>
+            <div className="text-sm text-muted-foreground">Uptime</div>
+          </div>
+          <div className="text-center p-6 bg-muted rounded-lg">
+            <div className="text-3xl font-bold text-tertiary mb-2">90%</div>
+            <div className="text-sm text-muted-foreground">Performance ↑</div>
+          </div>
+          <div className="text-center p-6 bg-muted rounded-lg">
+            <div className="text-3xl font-bold text-accent mb-2">52</div>
+            <div className="text-sm text-muted-foreground">Tests ✓</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TechStack;

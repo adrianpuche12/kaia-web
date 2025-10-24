@@ -7,16 +7,37 @@ const Releases = () => {
   const handleDownload = (url: string, version: string) => {
     if (url === '#') return;
 
-    // Para URLs directas de GitHub o storage público, crear elemento de descarga
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `kaia-v${version}.apk`;
-    link.target = '_blank';
-    // Agregar atributos para forzar descarga
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Detectar si es un dispositivo móvil Android (principal target)
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+
+    if (isAndroid || isMobile) {
+      // En móviles Android, crear un link invisible y hacer click
+      // Esto funciona mejor que window.location.href en Chrome móvil
+      const link = document.createElement('a');
+      link.href = url;
+      link.style.display = 'none';
+      // No usar atributo download en móvil, dejar que el navegador lo maneje
+      document.body.appendChild(link);
+      link.click();
+
+      // Limpiar después de un delay para asegurar que el click se procese
+      setTimeout(() => {
+        document.body.removeChild(link);
+      }, 100);
+    } else {
+      // En desktop, usar el método tradicional con atributo download
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `kaia-v${version}.apk`;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   const getStatusBadge = (status: string) => {

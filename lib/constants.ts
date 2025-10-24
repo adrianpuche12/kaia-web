@@ -203,7 +203,8 @@ export const RELEASES = [
     date: '2025-10-18',
     platform: 'Android',
     size: '28.5 MB',
-    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/8345a8ea-847e-4372-9068-4e4876fa091c',
+    // Usar nuestro endpoint API que redirige a la descarga directa
+    downloadUrl: '/api/download?buildId=8345a8ea-847e-4372-9068-4e4876fa091c',
     status: 'stable',
     notes: [
       'Versión inicial MVP',

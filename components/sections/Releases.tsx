@@ -4,9 +4,39 @@ import React from 'react';
 import { RELEASES } from '@/lib/constants';
 
 const Releases = () => {
-  const handleDownload = (url: string) => {
-    if (url !== '#') {
-      window.open(url, '_blank');
+  const handleDownload = async (url: string, version: string, buildId: string) => {
+    if (url === '#') return;
+
+    // Si es una URL a nuestro API endpoint, intentar obtener el archivo directamente
+    if (url.startsWith('/api/download')) {
+      try {
+        // Intentar hacer fetch del archivo
+        const response = await fetch(url);
+
+        if (response.ok && response.redirected) {
+          // Si se redirigió, abrir en nueva pestaña
+          window.open(response.url, '_blank');
+        } else {
+          // Fallback: abrir el link directamente
+          window.open(url, '_blank');
+        }
+      } catch (error) {
+        console.error('Error downloading:', error);
+        // Fallback a Expo Dev page
+        window.open(
+          `https://expo.dev/accounts/adrianpuche/projects/mobile/builds/${buildId}`,
+          '_blank'
+        );
+      }
+    } else {
+      // Para URLs directas, crear elemento de descarga
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `kaia-v${version}.apk`;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   };
 
@@ -90,7 +120,7 @@ const Releases = () => {
 
                     {/* Download Button */}
                     <button
-                      onClick={() => handleDownload(release.downloadUrl)}
+                      onClick={() => handleDownload(release.downloadUrl, release.version, release.id)}
                       disabled={release.downloadUrl === '#'}
                       className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2 ${
                         release.downloadUrl === '#'

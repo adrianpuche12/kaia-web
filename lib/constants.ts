@@ -193,3 +193,40 @@ export const DOWNLOAD_LINKS = {
   appStore: '#', // iOS coming soon
   apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/8345a8ea-847e-4372-9068-4e4876fa091c',
 };
+
+// Releases/Versiones disponibles
+export const RELEASES = [
+  {
+    id: '8345a8ea-847e-4372-9068-4e4876fa091c',
+    version: '1.0.0',
+    buildNumber: 1,
+    date: '2025-10-18',
+    platform: 'Android',
+    size: '28.5 MB',
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/8345a8ea-847e-4372-9068-4e4876fa091c',
+    status: 'stable',
+    notes: [
+      'Versión inicial MVP',
+      '7 pantallas completas',
+      'Autenticación JWT',
+      'Integración con backend API',
+      'Comandos de voz naturales',
+    ],
+  },
+  {
+    id: 'beta-1.1.0',
+    version: '1.1.0-beta',
+    buildNumber: 2,
+    date: '2025-10-24',
+    platform: 'Android',
+    size: '29.2 MB',
+    downloadUrl: '#',
+    status: 'beta',
+    notes: [
+      'Mejoras en la interfaz',
+      'Optimización de rendimiento',
+      'Corrección de bugs menores',
+      'Nuevas animaciones',
+    ],
+  },
+];

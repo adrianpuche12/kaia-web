@@ -30,6 +30,7 @@ const Navbar = () => {
     { label: 'Características', href: 'features' },
     { label: 'Tecnología', href: 'tech-stack' },
     { label: 'Estadísticas', href: 'stats' },
+    { label: 'Versiones', href: 'releases' },
     { label: 'Roadmap', href: 'changelog' },
     { label: 'FAQ', href: 'faq' },
   ];
@@ -71,8 +72,10 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isScrolled ? 'text-gray-900' : 'text-white'
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled
+                    ? 'text-gray-900 hover:text-primary'
+                    : 'text-white hover:text-white/80'
                 }`}
               >
                 {link.label}
@@ -82,7 +85,7 @@ const Navbar = () => {
             <Button
               size="sm"
               className="bg-tertiary hover:bg-tertiary-dark"
-              onClick={() => window.open(DOWNLOAD_LINKS.apkDirect, '_blank')}
+              onClick={() => scrollToSection('releases')}
             >
               Descargar
             </Button>
@@ -137,7 +140,7 @@ const Navbar = () => {
                 size="sm"
                 className="w-full bg-tertiary hover:bg-tertiary-dark"
                 onClick={() => {
-                  window.open(DOWNLOAD_LINKS.apkDirect, '_blank');
+                  scrollToSection('releases');
                   setIsMobileMenuOpen(false);
                 }}
               >

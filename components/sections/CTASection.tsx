@@ -6,7 +6,11 @@ import { DOWNLOAD_LINKS } from '@/lib/constants';
 
 const CTASection = () => {
   const handleDownload = () => {
-    window.open(DOWNLOAD_LINKS.apkDirect, '_blank');
+    // Navegar a la sección de releases
+    const releasesSection = document.getElementById('releases');
+    if (releasesSection) {
+      releasesSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -21,9 +25,8 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 shadow-xl"
+            <button
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-primary hover:bg-gray-100 shadow-xl transition-all duration-200"
               onClick={handleDownload}
             >
               <svg
@@ -40,7 +43,7 @@ const CTASection = () => {
                 />
               </svg>
               Descargar gratis
-            </Button>
+            </button>
 
             <Button
               variant="outline"

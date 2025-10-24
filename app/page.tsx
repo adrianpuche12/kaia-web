@@ -4,6 +4,7 @@ import Features from '@/components/sections/Features';
 import TechStack from '@/components/sections/TechStack';
 import Stats from '@/components/sections/Stats';
 import Download from '@/components/sections/Download';
+import Releases from '@/components/sections/Releases';
 import Changelog from '@/components/sections/Changelog';
 import FAQSection from '@/components/sections/FAQ';
 import CTASection from '@/components/sections/CTASection';
@@ -18,6 +19,7 @@ export default function Home() {
       <TechStack />
       <Stats />
       <Download />
+      <Releases />
       <Changelog />
       <FAQSection />
       <CTASection />

@@ -6,14 +6,21 @@ import { DOWNLOAD_LINKS } from '@/lib/constants';
 
 const Download = () => {
   const handleDownload = (platform: 'android' | 'ios' | 'apk') => {
-    const links = {
-      android: DOWNLOAD_LINKS.playStore,
-      ios: DOWNLOAD_LINKS.appStore,
-      apk: DOWNLOAD_LINKS.apkDirect,
-    };
+    if (platform === 'apk') {
+      // Navegar a la sección de releases
+      const releasesSection = document.getElementById('releases');
+      if (releasesSection) {
+        releasesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      const links = {
+        android: DOWNLOAD_LINKS.playStore,
+        ios: DOWNLOAD_LINKS.appStore,
+      };
 
-    if (links[platform] !== '#') {
-      window.open(links[platform], '_blank');
+      if (links[platform] !== '#') {
+        window.open(links[platform], '_blank');
+      }
     }
   };
 
@@ -22,10 +29,10 @@ const Download = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Descarga Kaia
           </h2>
-          <p className="text-xl text-muted-foreground mb-12">
+          <p className="text-xl text-gray-700 mb-12">
             Disponible para Android. iOS próximamente.
           </p>
 
@@ -64,8 +71,8 @@ const Download = () => {
 
           {/* Direct APK Download */}
           <div className="mb-12">
-            <p className="text-sm text-muted-foreground mb-4">
-              O descarga el APK directamente para probar la versión beta:
+            <p className="text-sm text-gray-700 mb-4">
+              O descarga directamente una de nuestras versiones disponibles:
             </p>
             <Button
               variant="outline"
@@ -82,22 +89,22 @@ const Download = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                 />
               </svg>
-              Descargar APK (Beta)
+              Ver todas las versiones
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-8 max-w-md mx-auto pt-8 border-t border-muted">
+          <div className="grid grid-cols-2 gap-8 max-w-md mx-auto pt-8 border-t border-gray-200">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">5,000+</div>
-              <div className="text-sm text-muted-foreground mt-1">Descargas</div>
+              <div className="text-sm text-gray-700 mt-1">Descargas</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">4.8 ⭐</div>
-              <div className="text-sm text-muted-foreground mt-1">Rating</div>
+              <div className="text-sm text-gray-700 mt-1">Rating</div>
             </div>
           </div>
         </div>

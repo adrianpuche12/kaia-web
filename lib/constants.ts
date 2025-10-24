@@ -202,9 +202,9 @@ export const RELEASES = [
     buildNumber: 1,
     date: '2025-10-18',
     platform: 'Android',
-    size: '28.5 MB',
-    // Usar nuestro endpoint API que redirige a la descarga directa
-    downloadUrl: '/api/download?buildId=8345a8ea-847e-4372-9068-4e4876fa091c',
+    size: '65.4 MB',
+    // URL directa de descarga desde GitHub Releases
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.0.0/application-8345a8ea-847e-4372-9068-4e4876fa091c.apk',
     status: 'stable',
     notes: [
       'Versión inicial MVP',

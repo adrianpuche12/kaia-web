@@ -4,40 +4,19 @@ import React from 'react';
 import { RELEASES } from '@/lib/constants';
 
 const Releases = () => {
-  const handleDownload = async (url: string, version: string, buildId: string) => {
+  const handleDownload = (url: string, version: string) => {
     if (url === '#') return;
 
-    // Si es una URL a nuestro API endpoint, intentar obtener el archivo directamente
-    if (url.startsWith('/api/download')) {
-      try {
-        // Intentar hacer fetch del archivo
-        const response = await fetch(url);
-
-        if (response.ok && response.redirected) {
-          // Si se redirigió, abrir en nueva pestaña
-          window.open(response.url, '_blank');
-        } else {
-          // Fallback: abrir el link directamente
-          window.open(url, '_blank');
-        }
-      } catch (error) {
-        console.error('Error downloading:', error);
-        // Fallback a Expo Dev page
-        window.open(
-          `https://expo.dev/accounts/adrianpuche/projects/mobile/builds/${buildId}`,
-          '_blank'
-        );
-      }
-    } else {
-      // Para URLs directas, crear elemento de descarga
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `kaia-v${version}.apk`;
-      link.target = '_blank';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+    // Para URLs directas de GitHub o storage público, crear elemento de descarga
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `kaia-v${version}.apk`;
+    link.target = '_blank';
+    // Agregar atributos para forzar descarga
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const getStatusBadge = (status: string) => {
@@ -120,7 +99,7 @@ const Releases = () => {
 
                     {/* Download Button */}
                     <button
-                      onClick={() => handleDownload(release.downloadUrl, release.version, release.id)}
+                      onClick={() => handleDownload(release.downloadUrl, release.version)}
                       disabled={release.downloadUrl === '#'}
                       className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center gap-2 ${
                         release.downloadUrl === '#'

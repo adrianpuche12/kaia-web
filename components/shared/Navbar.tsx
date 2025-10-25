@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
-import { DOWNLOAD_LINKS } from '@/lib/constants';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
+  const t = useTranslations('nav');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -26,13 +28,13 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { label: 'Inicio', href: 'hero' },
-    { label: 'Características', href: 'features' },
-    { label: 'Tecnología', href: 'tech-stack' },
-    { label: 'Estadísticas', href: 'stats' },
-    { label: 'Versiones', href: 'releases' },
-    { label: 'Roadmap', href: 'changelog' },
-    { label: 'FAQ', href: 'faq' },
+    { label: t('home'), href: 'hero' },
+    { label: t('features'), href: 'features' },
+    { label: t('techStack'), href: 'tech-stack' },
+    { label: t('stats'), href: 'stats' },
+    { label: t('releases'), href: 'releases' },
+    { label: t('changelog'), href: 'changelog' },
+    { label: t('faq'), href: 'faq' },
   ];
 
   return (
@@ -67,7 +69,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -82,12 +84,14 @@ const Navbar = () => {
               </button>
             ))}
 
+            <LanguageSwitcher variant={isScrolled ? 'dark' : 'light'} />
+
             <Button
               size="sm"
               className="bg-tertiary hover:bg-tertiary-dark"
               onClick={() => scrollToSection('releases')}
             >
-              Descargar
+              {t('download')}
             </Button>
           </div>
 
@@ -135,7 +139,12 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
-            <div className="px-4 pt-4">
+            <div className="px-4 pt-2 pb-2 border-t border-gray-200 mt-2">
+              <div className="flex justify-center">
+                <LanguageSwitcher variant="dark" />
+              </div>
+            </div>
+            <div className="px-4 pt-2">
               <Button
                 size="sm"
                 className="w-full bg-tertiary hover:bg-tertiary-dark"
@@ -144,7 +153,7 @@ const Navbar = () => {
                   setIsMobileMenuOpen(false);
                 }}
               >
-                Descargar
+                {t('download')}
               </Button>
             </div>
           </div>

@@ -1,10 +1,14 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
-import { BRAND, DOWNLOAD_LINKS } from '@/lib/constants';
 
 const Hero = () => {
+  const t = useTranslations();
+  const tBrand = useTranslations('brand');
+  const tHero = useTranslations('hero');
+
   const handleDownload = () => {
     // Navegar a la sección de releases en lugar de abrir Expo Dev
     const releasesSection = document.getElementById('releases');
@@ -25,24 +29,24 @@ const Hero = () => {
           <div className="mb-8 inline-block">
             <div className="bg-white/25 backdrop-blur-sm rounded-3xl px-12 py-6">
               <h1 className="text-7xl md:text-8xl font-bold text-white tracking-wider">
-                {BRAND.name}
+                {tBrand('name')}
               </h1>
             </div>
           </div>
 
           {/* Tagline */}
           <p className="text-2xl md:text-3xl text-white/95 font-light mb-8 tracking-wide">
-            {BRAND.tagline}
+            {tBrand('tagline')}
           </p>
 
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Gestiona tu vida diaria con tu voz
+            {tHero('headline')}
           </h2>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            {BRAND.description}
+            {tBrand('description')}
           </p>
 
           {/* CTAs */}
@@ -65,7 +69,7 @@ const Hero = () => {
                   d="M4 16v1a3 3 0 003 3h10a 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 />
               </svg>
-              Descargar ahora
+              {tHero('ctaDownload')}
             </Button>
 
             <Button
@@ -76,7 +80,7 @@ const Hero = () => {
                 document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Ver cómo funciona
+              {tHero('ctaLearnMore')}
             </Button>
           </div>
 
@@ -84,15 +88,15 @@ const Hero = () => {
           <div className="mt-16 flex flex-wrap justify-center gap-8 text-white">
             <div className="text-center">
               <div className="text-3xl font-bold">1,000+</div>
-              <div className="text-sm text-white/80">Usuarios</div>
+              <div className="text-sm text-white/80">{tHero('statsUsers')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold">5,000+</div>
-              <div className="text-sm text-white/80">Descargas</div>
+              <div className="text-sm text-white/80">{tHero('statsDownloads')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold">4.8 ⭐</div>
-              <div className="text-sm text-white/80">Rating</div>
+              <div className="text-sm text-white/80">{tHero('statsRating')}</div>
             </div>
           </div>
         </div>

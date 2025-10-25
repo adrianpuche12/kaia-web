@@ -1,17 +1,22 @@
+'use client';
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Card from '../ui/Card';
 import { TECH_STACK } from '@/lib/constants';
 
 const TechStack = () => {
+  const t = useTranslations('techStack');
+
   return (
     <section id="tech-stack" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Tecnología de vanguardia
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Construido con las mejores herramientas y frameworks del mercado
+            {t('subtitle')}
           </p>
         </div>
 
@@ -67,7 +72,7 @@ const TechStack = () => {
           {/* Integrations */}
           <div>
             <h3 className="text-2xl font-bold text-center mb-6 text-tertiary">
-              Integraciones
+              {t('integrations')}
             </h3>
             <Card className="h-full">
               <div className="space-y-4">

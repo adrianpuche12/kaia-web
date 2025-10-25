@@ -82,23 +82,23 @@ export const STATS = [
 
 export const TECH_STACK = {
   backend: [
-    { name: 'Node.js', icon: '🟢', description: 'Runtime de JavaScript' },
-    { name: 'TypeScript', icon: '💙', description: 'Tipado estático' },
-    { name: 'Express', icon: '⚡', description: 'Framework web' },
-    { name: 'PostgreSQL', icon: '🐘', description: 'Base de datos' },
+    { name: 'Node.js', icon: '🟢', description: 'JavaScript runtime' },
+    { name: 'TypeScript', icon: '💙', description: 'Static typing' },
+    { name: 'Express', icon: '⚡', description: 'Web framework' },
+    { name: 'PostgreSQL', icon: '🐘', description: 'Database' },
     { name: 'Prisma', icon: '🔷', description: 'ORM' },
-    { name: 'Redis', icon: '🔴', description: 'Caché en memoria' },
+    { name: 'Redis', icon: '🔴', description: 'In-memory cache' },
   ],
   mobile: [
-    { name: 'React Native', icon: '⚛️', description: 'Framework móvil' },
-    { name: 'Expo', icon: '📱', description: 'Plataforma de desarrollo' },
-    { name: 'TypeScript', icon: '💙', description: 'Tipado estático' },
+    { name: 'React Native', icon: '⚛️', description: 'Mobile framework' },
+    { name: 'Expo', icon: '📱', description: 'Development platform' },
+    { name: 'TypeScript', icon: '💙', description: 'Static typing' },
     { name: 'Zustand', icon: '🐻', description: 'State management' },
   ],
   integrations: [
-    { name: 'Twilio', icon: '📞', description: 'SMS y WhatsApp' },
+    { name: 'Twilio', icon: '📞', description: 'SMS & WhatsApp' },
     { name: 'SendGrid', icon: '📧', description: 'Email' },
-    { name: 'Google Maps', icon: '🗺️', description: 'Geolocalización' },
+    { name: 'Google Maps', icon: '🗺️', description: 'Geolocation' },
     { name: 'Railway', icon: '🚂', description: 'Hosting' },
   ],
 };
@@ -110,13 +110,13 @@ export const CHANGELOG = [
     title: 'MVP Launch',
     status: 'completed',
     features: [
-      '38 endpoints funcionales',
-      '7 pantallas móviles completas',
-      'Sistema de autenticación JWT',
-      'PostgreSQL + 23 índices optimizados',
-      'Redis caché implementado',
-      '52 tests automatizados',
-      'Deployment a Railway',
+      '38 functional endpoints',
+      '7 complete mobile screens',
+      'JWT authentication system',
+      'PostgreSQL + 23 optimized indexes',
+      'Redis cache implemented',
+      '52 automated tests',
+      'Railway deployment',
     ],
   },
   {
@@ -125,19 +125,19 @@ export const CHANGELOG = [
     title: 'Push Notifications',
     status: 'pending',
     features: [
-      'Notificaciones push con Expo',
-      'Eventos recurrentes (RRULE)',
+      'Push notifications with Expo',
+      'Recurring events (RRULE)',
       'Background jobs (BullMQ)',
     ],
   },
   {
     version: 'v1.2',
-    date: 'Dic 2025',
+    date: 'Dec 2025',
     title: 'App Stores',
     status: 'pending',
     features: [
-      'Publicación en Google Play Store',
-      'Versión iOS (TestFlight)',
+      'Google Play Store release',
+      'iOS version (TestFlight)',
       'Web dashboard MVP',
     ],
   },
@@ -194,7 +194,7 @@ export const DOWNLOAD_LINKS = {
   apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/8345a8ea-847e-4372-9068-4e4876fa091c',
 };
 
-// Releases/Versiones disponibles
+// Releases/Available versions
 export const RELEASES = [
   {
     id: '8345a8ea-847e-4372-9068-4e4876fa091c',
@@ -203,15 +203,15 @@ export const RELEASES = [
     date: '2025-10-18',
     platform: 'Android',
     size: '65.4 MB',
-    // URL directa de descarga desde GitHub Releases
+    // Direct download URL from GitHub Releases
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.0.0/application-8345a8ea-847e-4372-9068-4e4876fa091c.apk',
     status: 'stable',
     notes: [
-      'Versión inicial MVP',
-      '7 pantallas completas',
-      'Autenticación JWT',
-      'Integración con backend API',
-      'Comandos de voz naturales',
+      'Initial MVP version',
+      '7 complete screens',
+      'JWT authentication',
+      'Backend API integration',
+      'Natural voice commands',
     ],
   },
   {
@@ -224,10 +224,10 @@ export const RELEASES = [
     downloadUrl: '#',
     status: 'beta',
     notes: [
-      'Mejoras en la interfaz',
-      'Optimización de rendimiento',
-      'Corrección de bugs menores',
-      'Nuevas animaciones',
+      'UI improvements',
+      'Performance optimization',
+      'Minor bug fixes',
+      'New animations',
     ],
   },
 ];

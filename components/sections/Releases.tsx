@@ -1,9 +1,12 @@
 'use client';
 
 import React from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { RELEASES } from '@/lib/constants';
 
 const Releases = () => {
+  const t = useTranslations('releases');
+  const locale = useLocale();
   const handleDownload = (url: string, version: string) => {
     if (url === '#') return;
 
@@ -45,17 +48,17 @@ const Releases = () => {
       stable: {
         bg: 'bg-tertiary',
         text: 'text-white',
-        label: 'Estable',
+        label: t('stable'),
       },
       beta: {
         bg: 'bg-accent',
         text: 'text-white',
-        label: 'Beta',
+        label: t('beta'),
       },
       deprecated: {
         bg: 'bg-gray-500',
         text: 'text-white',
-        label: 'Obsoleta',
+        label: t('deprecated'),
       },
     };
 
@@ -75,10 +78,10 @@ const Releases = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Versiones Disponibles
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              Descarga la versión que prefieras directamente desde nuestra plataforma
+              {t('subtitle')}
             </p>
           </div>
 
@@ -102,7 +105,7 @@ const Releases = () => {
                         </div>
                         <div className="flex items-center gap-4 text-sm text-gray-600">
                           <span className="flex items-center gap-1">
-                            📅 {new Date(release.date).toLocaleDateString('es-ES', {
+                            📅 {new Date(release.date).toLocaleDateString(locale, {
                               year: 'numeric',
                               month: 'long',
                               day: 'numeric',
@@ -141,14 +144,14 @@ const Releases = () => {
                           d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                         />
                       </svg>
-                      {release.downloadUrl === '#' ? 'Próximamente' : 'Descargar'}
+                      {release.downloadUrl === '#' ? t('comingSoon') : t('download')}
                     </button>
                   </div>
 
                   {/* Release Notes */}
                   <div className="border-t border-gray-200 pt-6">
                     <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wider">
-                      Novedades en esta versión
+                      {t('releaseNotes')}
                     </h4>
                     <ul className="space-y-2">
                       {release.notes.map((note, index) => (
@@ -191,23 +194,23 @@ const Releases = () => {
               </svg>
               <div>
                 <h4 className="font-semibold text-blue-900 mb-2">
-                  ¿Cómo instalar la aplicación?
+                  {t('howToInstall.title')}
                 </h4>
                 <ol className="text-sm text-blue-800 space-y-1 list-decimal list-inside">
-                  <li>Descarga el archivo APK haciendo clic en el botón "Descargar"</li>
-                  <li>Permite la instalación de fuentes desconocidas en tu dispositivo</li>
-                  <li>Abre el archivo descargado e instala la aplicación</li>
-                  <li>¡Listo! Ya puedes comenzar a usar Kaia</li>
+                  <li>{t('howToInstall.step1')}</li>
+                  <li>{t('howToInstall.step2')}</li>
+                  <li>{t('howToInstall.step3')}</li>
+                  <li>{t('howToInstall.step4')}</li>
                 </ol>
                 <p className="text-xs text-blue-700 mt-3">
-                  <strong>Nota:</strong> Si tienes problemas con la instalación, visita nuestra{' '}
+                  <strong>{t('howToInstall.note')}:</strong> {t('howToInstall.noteText')}{' '}
                   <a
                     href="https://kaia-production.up.railway.app/api/docs"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline hover:text-blue-900"
                   >
-                    documentación completa
+                    {t('howToInstall.documentation')}
                   </a>
                   .
                 </p>

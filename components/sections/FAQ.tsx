@@ -1,10 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FAQ } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
 
 const FAQSection = () => {
+  const t = useTranslations('faq');
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqKeys = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
 
   const toggleQuestion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -15,17 +18,17 @@ const FAQSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Preguntas frecuentes
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            Todo lo que necesitas saber sobre Kaia
+            {t('subtitle')}
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
-          {FAQ.map((item, index) => (
+          {faqKeys.map((key, index) => (
             <div
-              key={index}
+              key={key}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-200"
             >
               <button
@@ -33,7 +36,7 @@ const FAQSection = () => {
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-muted/50 transition-colors"
               >
                 <span className="font-semibold text-gray-900 pr-8">
-                  {item.question}
+                  {t(`items.${key}.question`)}
                 </span>
                 <svg
                   className={`w-5 h-5 text-primary transition-transform duration-200 flex-shrink-0 ${
@@ -54,7 +57,7 @@ const FAQSection = () => {
 
               {openIndex === index && (
                 <div className="px-6 pb-4 text-gray-700">
-                  {item.answer}
+                  {t(`items.${key}.answer`)}
                 </div>
               )}
             </div>
@@ -63,7 +66,7 @@ const FAQSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">
-            ¿No encontraste lo que buscabas?
+            {t('subtitle')}
           </p>
           <a
             href="https://kaia-production.up.railway.app/api/docs"
@@ -71,7 +74,7 @@ const FAQSection = () => {
             rel="noopener noreferrer"
             className="text-primary font-semibold hover:underline"
           >
-            Consulta la documentación completa →
+            API Documentation →
           </a>
         </div>
       </div>

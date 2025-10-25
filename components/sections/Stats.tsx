@@ -1,11 +1,21 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { STATS } from '@/lib/constants';
+import { useTranslations } from 'next-intl';
 
 const Stats = () => {
+  const t = useTranslations('stats');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+
+  const stats = [
+    { key: 'activeUsers', value: 1000, suffix: '+' },
+    { key: 'totalDownloads', value: 5000, suffix: '+' },
+    { key: 'eventsCreated', value: 50000, suffix: '+' },
+    { key: 'averageRating', value: 4.8, suffix: '⭐', decimals: 1 },
+    { key: 'apiEndpoints', value: 38, suffix: '' },
+    { key: 'uptime', value: 99.9, suffix: '%', decimals: 1 },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,18 +43,16 @@ const Stats = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Kaia en números
+            {t('title')}
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Nuestro crecimiento y el impacto que estamos generando
-          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
-          {STATS.map((stat, index) => (
+          {stats.map((stat, index) => (
             <StatCard
-              key={index}
+              key={stat.key}
               stat={stat}
+              label={t(`items.${stat.key}`)}
               isVisible={isVisible}
               delay={index * 100}
             />
@@ -58,15 +66,15 @@ const Stats = () => {
 interface StatCardProps {
   stat: {
     value: number;
-    label: string;
     suffix?: string;
     decimals?: number;
   };
+  label: string;
   isVisible: boolean;
   delay: number;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ stat, isVisible, delay }) => {
+const StatCard: React.FC<StatCardProps> = ({ stat, label, isVisible, delay }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -98,7 +106,7 @@ const StatCard: React.FC<StatCardProps> = ({ stat, isVisible, delay }) => {
     if (stat.decimals !== undefined) {
       return num.toFixed(stat.decimals);
     }
-    return Math.floor(num).toLocaleString('es-ES');
+    return Math.floor(num).toLocaleString();
   };
 
   return (
@@ -107,7 +115,7 @@ const StatCard: React.FC<StatCardProps> = ({ stat, isVisible, delay }) => {
         {formatNumber(count)}
         {stat.suffix}
       </div>
-      <div className="text-sm text-white/80">{stat.label}</div>
+      <div className="text-sm text-white/80">{label}</div>
     </div>
   );
 };

@@ -1,16 +1,21 @@
+'use client';
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { CHANGELOG } from '@/lib/constants';
 
 const Changelog = () => {
+  const t = useTranslations('changelog');
+
   return (
     <section id="changelog" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Roadmap y Actualizaciones
+            {t('title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Conoce las últimas actualizaciones y lo que viene próximamente
+            {t('subtitle')}
           </p>
         </div>
 
@@ -61,8 +66,8 @@ const Changelog = () => {
                         }`}
                       >
                         {version.status === 'completed'
-                          ? 'Completado'
-                          : 'Próximamente'}
+                          ? t('completed')
+                          : t('upcoming')}
                       </span>
                     </div>
 
@@ -112,7 +117,7 @@ const Changelog = () => {
           {/* CTA */}
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">
-              ¿Quieres saber más sobre nuestro roadmap completo?
+              {t('viewOnGitHub')}
             </p>
             <a
               href="https://github.com/adrianpuche12/Kaia"
@@ -120,7 +125,7 @@ const Changelog = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center text-primary font-semibold hover:underline"
             >
-              Ver en GitHub
+              {t('githubLink')}
               <svg
                 className="w-5 h-5 ml-2"
                 fill="none"

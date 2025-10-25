@@ -1,7 +1,12 @@
+'use client';
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { SOCIAL_LINKS } from '@/lib/constants';
 
 const Footer = () => {
+  const t = useTranslations('footer');
+  const tBrand = useTranslations('brand');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,32 +15,27 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Kaia</h3>
-            <p className="text-white/70">Su asistente ideal</p>
+            <h3 className="text-2xl font-bold mb-4">{tBrand('name')}</h3>
+            <p className="text-white/70">{t('tagline')}</p>
           </div>
 
           {/* Product Column */}
           <div>
-            <h4 className="font-semibold mb-4">Producto</h4>
+            <h4 className="font-semibold mb-4">{t('sections.product')}</h4>
             <ul className="space-y-2 text-white/70">
               <li>
                 <a href="#features" className="hover:text-white transition-colors">
-                  Features
+                  {t('links.features')}
                 </a>
               </li>
               <li>
                 <a href="#download" className="hover:text-white transition-colors">
-                  Descargar
+                  {t('links.download')}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Changelog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Roadmap
+                <a href="#pricing" className="hover:text-white transition-colors">
+                  {t('links.pricing')}
                 </a>
               </li>
             </ul>
@@ -43,7 +43,7 @@ const Footer = () => {
 
           {/* Resources Column */}
           <div>
-            <h4 className="font-semibold mb-4">Recursos</h4>
+            <h4 className="font-semibold mb-4">{t('sections.resources')}</h4>
             <ul className="space-y-2 text-white/70">
               <li>
                 <a
@@ -52,17 +52,22 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  Documentación
+                  {t('links.documentation')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Guías
+                  {t('links.api')}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Soporte
+                <a
+                  href={SOCIAL_LINKS.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {t('links.github')}
                 </a>
               </li>
             </ul>
@@ -70,16 +75,21 @@ const Footer = () => {
 
           {/* Legal Column */}
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">{t('sections.legal')}</h4>
             <ul className="space-y-2 text-white/70">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Términos y condiciones
+                  {t('links.terms')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Política de privacidad
+                  {t('links.privacy')}
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  {t('links.contact')}
                 </a>
               </li>
             </ul>
@@ -122,10 +132,10 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-white/50 text-sm">
           <p>
-            © {currentYear} Kaia. Todos los derechos reservados.
+            © {currentYear} {tBrand('name')}. {t('copyright')}.
           </p>
           <p className="mt-2">
-            Hecho con ❤️ por Jorge Adrián Pucheta
+            {t('madeWith')} ❤️ {t('by')} Jorge Adrián Pucheta
           </p>
         </div>
       </div>

@@ -1,0 +1,173 @@
+{
+  "brand": {
+    "name": "Kaia",
+    "tagline": "Your ideal assistant",
+    "description": "Manage your daily life with your voice. Kaia is your intelligent personal assistant that helps you organize events, reminders, and alarms through natural voice commands."
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "techStack": "Technology",
+    "stats": "Statistics",
+    "releases": "Releases",
+    "changelog": "Roadmap",
+    "faq": "FAQ",
+    "download": "Download"
+  },
+  "hero": {
+    "headline": "Manage your daily life with your voice",
+    "ctaDownload": "Download now",
+    "ctaLearnMore": "See how it works",
+    "statsUsers": "Users",
+    "statsDownloads": "Downloads",
+    "statsRating": "Rating"
+  },
+  "features": {
+    "title": "How does Kaia work?",
+    "subtitle": "All the tools you need in one place",
+    "items": {
+      "voice": {
+        "title": "Natural voice commands",
+        "description": "Speak naturally. Kaia understands your intentions without complicated commands."
+      },
+      "events": {
+        "title": "Smart event management",
+        "description": "Create, edit and organize your events with automatic location and time context."
+      },
+      "alarms": {
+        "title": "Contextual alarms",
+        "description": "Smart reminders based on location, time, and your usage patterns."
+      },
+      "messaging": {
+        "title": "Multi-platform messaging",
+        "description": "Receive notifications via WhatsApp, SMS, or Email according to your preferences."
+      },
+      "geolocation": {
+        "title": "Smart geolocation",
+        "description": "Kaia knows your frequent locations and suggests events based on where you are."
+      },
+      "ai": {
+        "title": "AI that learns from you",
+        "description": "Improves over time, learning your preferences and patterns to assist you better."
+      }
+    }
+  },
+  "stats": {
+    "title": "Kaia in Numbers",
+    "items": {
+      "activeUsers": "Active users",
+      "totalDownloads": "Total downloads",
+      "eventsCreated": "Events created",
+      "averageRating": "Average rating",
+      "apiEndpoints": "API Endpoints",
+      "uptime": "Uptime %"
+    }
+  },
+  "techStack": {
+    "title": "Cutting-Edge Technology",
+    "subtitle": "Built with the best tools and frameworks on the market",
+    "backend": "Backend",
+    "mobile": "Mobile",
+    "integrations": "Integrations"
+  },
+  "download": {
+    "title": "Download Kaia",
+    "subtitle": "Available for Android. iOS coming soon.",
+    "comingSoon": "Coming soon",
+    "directDownload": "Or download directly one of our available versions:",
+    "viewAllVersions": "View all versions",
+    "downloads": "Downloads",
+    "rating": "Rating"
+  },
+  "releases": {
+    "title": "Available Releases",
+    "subtitle": "Download the version you prefer directly from our platform",
+    "stable": "Stable",
+    "beta": "Beta",
+    "deprecated": "Deprecated",
+    "comingSoon": "Coming soon",
+    "download": "Download",
+    "releaseNotes": "What's new in this version",
+    "howToInstall": {
+      "title": "How to install the application?",
+      "step1": "Download the APK file by clicking the \"Download\" button",
+      "step2": "Allow installation from unknown sources on your device",
+      "step3": "Open the downloaded file and install the application",
+      "step4": "Ready! You can now start using Kaia",
+      "note": "Note",
+      "noteText": "If you have problems with the installation, visit our",
+      "documentation": "full documentation"
+    }
+  },
+  "changelog": {
+    "title": "Development Roadmap",
+    "subtitle": "Learn about the latest updates and what's coming next",
+    "completed": "Completed",
+    "upcoming": "Coming soon",
+    "viewOnGitHub": "Want to learn more about our full roadmap?",
+    "githubLink": "View on GitHub"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Kaia",
+    "items": {
+      "q1": {
+        "question": "Is Kaia free?",
+        "answer": "Yes, Kaia is completely free during the MVP phase. We will offer premium plans in the future with advanced features."
+      },
+      "q2": {
+        "question": "Is it available on iOS?",
+        "answer": "Currently only on Android. The iOS version is in development and will be available soon."
+      },
+      "q3": {
+        "question": "Does Kaia work offline?",
+        "answer": "Some basic functions work offline. AI and messaging features require an internet connection."
+      },
+      "q4": {
+        "question": "Is my data safe?",
+        "answer": "Absolutely. We use end-to-end encryption and don't share your data with third parties. Your privacy is our priority."
+      },
+      "q5": {
+        "question": "Can I sync with Google Calendar?",
+        "answer": "This feature is in development and will be available in upcoming updates."
+      },
+      "q6": {
+        "question": "Does Kaia drain the battery?",
+        "answer": "No. Kaia is optimized to use minimal resources and preserve your device's battery."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to get started?",
+    "subtitle": "Download Kaia today and transform the way you organize your life",
+    "button": "Download Free"
+  },
+  "footer": {
+    "tagline": "Your intelligent personal assistant",
+    "sections": {
+      "product": "Product",
+      "resources": "Resources",
+      "legal": "Legal",
+      "social": "Follow us"
+    },
+    "links": {
+      "features": "Features",
+      "download": "Download",
+      "pricing": "Pricing",
+      "documentation": "Documentation",
+      "api": "API",
+      "github": "GitHub",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact"
+    },
+    "copyright": "All rights reserved",
+    "madeWith": "Made with",
+    "by": "by"
+  },
+  "metadata": {
+    "title": "Kaia - Your intelligent voice personal assistant",
+    "description": "Manage your daily life with natural voice commands. Events, reminders, alarms and more with contextual AI. Available for Android.",
+    "keywords": "personal assistant, voice, AI, calendar, events, reminders, alarms, android, app"
+  }
+}

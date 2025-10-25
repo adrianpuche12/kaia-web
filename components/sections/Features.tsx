@@ -1,8 +1,21 @@
+'use client';
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Card from '../ui/Card';
-import { FEATURES } from '@/lib/constants';
 
 const Features = () => {
+  const t = useTranslations('features');
+
+  const features = [
+    { key: 'voice', icon: '🗣️', color: 'primary' },
+    { key: 'events', icon: '📅', color: 'secondary' },
+    { key: 'alarms', icon: '⏰', color: 'accent' },
+    { key: 'messaging', icon: '📱', color: 'tertiary' },
+    { key: 'geolocation', icon: '🗺️', color: 'info' },
+    { key: 'ai', icon: '🤖', color: 'gradient' },
+  ];
+
   const colorClasses: Record<string, string> = {
     primary: 'bg-primary/10 text-primary',
     secondary: 'bg-secondary/10 text-secondary',
@@ -18,17 +31,17 @@ const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            ¿Cómo funciona Kaia?
+            {t('title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Todas las herramientas que necesitas en un solo lugar
+            {t('subtitle')}
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {FEATURES.map((feature, index) => (
-            <Card key={index} hover className="text-center">
+          {features.map((feature) => (
+            <Card key={feature.key} hover className="text-center">
               {/* Icon */}
               <div className="mb-6 flex justify-center">
                 <div
@@ -42,12 +55,12 @@ const Features = () => {
 
               {/* Title */}
               <h3 className="text-xl font-semibold text-foreground mb-3">
-                {feature.title}
+                {t(`items.${feature.key}.title`)}
               </h3>
 
               {/* Description */}
               <p className="text-muted-foreground leading-relaxed">
-                {feature.description}
+                {t(`items.${feature.key}.description`)}
               </p>
             </Card>
           ))}

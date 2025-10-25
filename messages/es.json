@@ -1,0 +1,173 @@
+{
+  "brand": {
+    "name": "Kaia",
+    "tagline": "Su asistente ideal",
+    "description": "Gestiona tu vida diaria con tu voz. Kaia es tu asistente personal inteligente que te ayuda a organizar eventos, recordatorios y alarmas mediante comandos de voz naturales."
+  },
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "techStack": "Tecnología",
+    "stats": "Estadísticas",
+    "releases": "Versiones",
+    "changelog": "Roadmap",
+    "faq": "FAQ",
+    "download": "Descargar"
+  },
+  "hero": {
+    "headline": "Gestiona tu vida diaria con tu voz",
+    "ctaDownload": "Descargar ahora",
+    "ctaLearnMore": "Ver cómo funciona",
+    "statsUsers": "Usuarios",
+    "statsDownloads": "Descargas",
+    "statsRating": "Rating"
+  },
+  "features": {
+    "title": "¿Cómo funciona Kaia?",
+    "subtitle": "Todas las herramientas que necesitas en un solo lugar",
+    "items": {
+      "voice": {
+        "title": "Comandos de voz naturales",
+        "description": "Habla naturalmente. Kaia entiende tus intenciones sin comandos complicados."
+      },
+      "events": {
+        "title": "Gestión inteligente de eventos",
+        "description": "Crea, edita y organiza tus eventos con contexto automático de ubicación y tiempo."
+      },
+      "alarms": {
+        "title": "Alarmas contextuales",
+        "description": "Recordatorios inteligentes basados en ubicación, tiempo y tus patrones de uso."
+      },
+      "messaging": {
+        "title": "Mensajería multi-plataforma",
+        "description": "Recibe notificaciones por WhatsApp, SMS o Email según tus preferencias."
+      },
+      "geolocation": {
+        "title": "Geolocalización inteligente",
+        "description": "Kaia conoce tus ubicaciones frecuentes y te sugiere eventos basados en dónde estás."
+      },
+      "ai": {
+        "title": "IA que aprende de ti",
+        "description": "Mejora con el tiempo, aprendiendo tus preferencias y patrones para asistirte mejor."
+      }
+    }
+  },
+  "stats": {
+    "title": "Kaia en Números",
+    "items": {
+      "activeUsers": "Usuarios activos",
+      "totalDownloads": "Descargas totales",
+      "eventsCreated": "Eventos creados",
+      "averageRating": "Rating promedio",
+      "apiEndpoints": "API Endpoints",
+      "uptime": "Uptime %"
+    }
+  },
+  "techStack": {
+    "title": "Tecnología de Vanguardia",
+    "subtitle": "Construido con las mejores herramientas y frameworks del mercado",
+    "backend": "Backend",
+    "mobile": "Mobile",
+    "integrations": "Integraciones"
+  },
+  "download": {
+    "title": "Descarga Kaia",
+    "subtitle": "Disponible para Android. iOS próximamente.",
+    "comingSoon": "Próximamente en",
+    "directDownload": "O descarga directamente una de nuestras versiones disponibles:",
+    "viewAllVersions": "Ver todas las versiones",
+    "downloads": "Descargas",
+    "rating": "Rating"
+  },
+  "releases": {
+    "title": "Versiones Disponibles",
+    "subtitle": "Descarga la versión que prefieras directamente desde nuestra plataforma",
+    "stable": "Estable",
+    "beta": "Beta",
+    "deprecated": "Obsoleta",
+    "comingSoon": "Próximamente",
+    "download": "Descargar",
+    "releaseNotes": "Novedades en esta versión",
+    "howToInstall": {
+      "title": "¿Cómo instalar la aplicación?",
+      "step1": "Descarga el archivo APK haciendo clic en el botón \"Descargar\"",
+      "step2": "Permite la instalación de fuentes desconocidas en tu dispositivo",
+      "step3": "Abre el archivo descargado e instala la aplicación",
+      "step4": "¡Listo! Ya puedes comenzar a usar Kaia",
+      "note": "Nota",
+      "noteText": "Si tienes problemas con la instalación, visita nuestra",
+      "documentation": "documentación completa"
+    }
+  },
+  "changelog": {
+    "title": "Roadmap y Actualizaciones",
+    "subtitle": "Conoce las últimas actualizaciones y lo que viene próximamente",
+    "completed": "Completado",
+    "upcoming": "Próximamente",
+    "viewOnGitHub": "¿Quieres saber más sobre nuestro roadmap completo?",
+    "githubLink": "Ver en GitHub"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre Kaia",
+    "items": {
+      "q1": {
+        "question": "¿Kaia es gratis?",
+        "answer": "Sí, Kaia es completamente gratis durante la fase MVP. Ofreceremos planes premium en el futuro con funciones avanzadas."
+      },
+      "q2": {
+        "question": "¿Está disponible en iOS?",
+        "answer": "Actualmente solo en Android. La versión iOS está en desarrollo y estará disponible próximamente."
+      },
+      "q3": {
+        "question": "¿Kaia funciona offline?",
+        "answer": "Algunas funciones básicas funcionan offline. Las funciones de IA y mensajería requieren conexión a internet."
+      },
+      "q4": {
+        "question": "¿Mis datos están seguros?",
+        "answer": "Absolutamente. Usamos encriptación end-to-end y no compartimos tus datos con terceros. Tu privacidad es nuestra prioridad."
+      },
+      "q5": {
+        "question": "¿Puedo sincronizar con Google Calendar?",
+        "answer": "Esta función está en desarrollo y estará disponible en las próximas actualizaciones."
+      },
+      "q6": {
+        "question": "¿Kaia consume mucha batería?",
+        "answer": "No. Kaia está optimizado para usar recursos mínimos y preservar la batería de tu dispositivo."
+      }
+    }
+  },
+  "cta": {
+    "title": "¿Listo para empezar?",
+    "subtitle": "Descarga Kaia hoy y transforma la forma en que organizas tu vida",
+    "button": "Descargar Gratis"
+  },
+  "footer": {
+    "tagline": "Tu asistente personal inteligente",
+    "sections": {
+      "product": "Producto",
+      "resources": "Recursos",
+      "legal": "Legal",
+      "social": "Síguenos"
+    },
+    "links": {
+      "features": "Características",
+      "download": "Descargar",
+      "pricing": "Precios",
+      "documentation": "Documentación",
+      "api": "API",
+      "github": "GitHub",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "contact": "Contacto"
+    },
+    "copyright": "Todos los derechos reservados",
+    "madeWith": "Hecho con",
+    "by": "por"
+  },
+  "metadata": {
+    "title": "Kaia - Tu asistente personal inteligente por voz",
+    "description": "Gestiona tu vida diaria con comandos de voz naturales. Eventos, recordatorios, alarmas y más con IA contextual. Disponible para Android.",
+    "keywords": "asistente personal, voz, IA, agenda, eventos, recordatorios, alarmas, android, app"
+  }
+}

@@ -50,7 +50,7 @@ const CTASection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary"
+              className="border-2 border-white text-white hover:bg-white/10 hover:border-white/80 backdrop-blur-sm"
               onClick={() => {
                 window.open('https://kaia-production.up.railway.app/api/docs', '_blank');
               }}

@@ -20,9 +20,9 @@ const TechStack = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 max-w-6xl mx-auto">
           {/* Backend */}
-          <div>
+          <div className="mb-8 md:mb-0">
             <h3 className="text-2xl font-bold text-center mb-6 text-primary">
               Backend
             </h3>
@@ -46,7 +46,7 @@ const TechStack = () => {
           </div>
 
           {/* Mobile */}
-          <div>
+          <div className="mb-8 md:mb-0">
             <h3 className="text-2xl font-bold text-center mb-6 text-secondary">
               Mobile
             </h3>
@@ -70,7 +70,7 @@ const TechStack = () => {
           </div>
 
           {/* Integrations */}
-          <div>
+          <div className="mb-8 md:mb-0">
             <h3 className="text-2xl font-bold text-center mb-6 text-tertiary">
               {t('integrations')}
             </h3>
@@ -95,7 +95,7 @@ const TechStack = () => {
         </div>
 
         {/* Performance Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="mt-20 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center p-6 bg-muted rounded-lg">
             <div className="text-3xl font-bold text-primary mb-2">15-18ms</div>
             <div className="text-sm text-gray-600">Response Time</div>

@@ -102,7 +102,7 @@ const Navbar = () => {
           >
             <svg
               className={`w-6 h-6 transition-colors ${
-                isScrolled ? 'text-foreground' : 'text-white'
+                isScrolled ? 'text-primary' : 'text-white'
               }`}
               fill="none"
               stroke="currentColor"

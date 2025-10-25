@@ -54,7 +54,7 @@ const Features = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {t(`items.${feature.key}.title`)}
               </h3>
 

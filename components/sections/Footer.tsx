@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Column */}
-          <div>
+          <div className="col-span-2 md:col-span-1 mb-4 md:mb-0">
             <h3 className="text-2xl font-bold mb-4">{tBrand('name')}</h3>
             <p className="text-white/70">{t('tagline')}</p>
           </div>

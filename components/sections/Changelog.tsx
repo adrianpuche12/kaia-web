@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { CHANGELOG } from '@/lib/constants';
+import { AnimatedHeading, AnimatedText, AnimatedSection } from '../animated';
 
 const Changelog = () => {
   const t = useTranslations('changelog');
@@ -11,12 +12,12 @@ const Changelog = () => {
     <section id="changelog" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <AnimatedHeading level={2} animation="fadeInUp" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t('title')}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          </AnimatedHeading>
+          <AnimatedText animation="fadeInUp" delay={100} className="text-xl text-gray-600 max-w-2xl mx-auto">
             {t('subtitle')}
-          </p>
+          </AnimatedText>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -26,8 +27,10 @@ const Changelog = () => {
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-muted transform md:-translate-x-1/2"></div>
 
             {CHANGELOG.map((version, index) => (
-              <div
+              <AnimatedSection
                 key={index}
+                animation={index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight'}
+                delay={100 * (index + 2)}
                 className={`relative mb-12 md:mb-8 ${
                   index % 2 === 0 ? 'md:pr-[50%]' : 'md:pl-[50%]'
                 }`}
@@ -110,7 +113,7 @@ const Changelog = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
 

@@ -1,0 +1,195 @@
+/* Animaciones profesionales para Kaia Web - Sin librerías externas */
+
+/* Fade in desde abajo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in desde arriba */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in desde la izquierda */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in desde la derecha */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in simple */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale in */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Clase base para elementos animados - ocultos por defecto */
+.animated {
+  opacity: 0;
+  transition: none;
+}
+
+/* Cuando el elemento es visible */
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.scaleIn {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Delays para stagger effect (animaciones escalonadas) */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Duraciones personalizadas */
+.duration-fast {
+  animation-duration: 0.4s;
+}
+
+.duration-normal {
+  animation-duration: 0.8s;
+}
+
+.duration-slow {
+  animation-duration: 1.2s;
+}
+
+/* Hover effects profesionales */
+.hoverLift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverLift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hoverScale {
+  transition: transform 0.3s ease;
+}
+
+.hoverScale:hover {
+  transform: scale(1.05);
+}
+
+.hoverGlow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hoverGlow:hover {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Parallax effect - aplicar a contenedor padre */
+.parallaxContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallaxElement {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animatedGradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}

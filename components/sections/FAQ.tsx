@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { AnimatedHeading, AnimatedText, AnimatedSection } from '../animated';
 
 const FAQSection = () => {
   const t = useTranslations('faq');
@@ -17,18 +18,20 @@ const FAQSection = () => {
     <section id="faq" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <AnimatedHeading level={2} animation="fadeInUp" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t('title')}
-          </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          </AnimatedHeading>
+          <AnimatedText animation="fadeInUp" delay={100} className="text-xl text-gray-700 max-w-2xl mx-auto">
             {t('subtitle')}
-          </p>
+          </AnimatedText>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
           {faqKeys.map((key, index) => (
-            <div
+            <AnimatedSection
               key={key}
+              animation="fadeInUp"
+              delay={100 * (index + 2)}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-200"
             >
               <button
@@ -60,7 +63,7 @@ const FAQSection = () => {
                   {t(`items.${key}.answer`)}
                 </div>
               )}
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 

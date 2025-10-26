@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
+import { AnimatedHeading, AnimatedText, AnimatedSection } from '../animated';
 
 const Hero = () => {
   const t = useTranslations();
@@ -26,31 +27,48 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo Container */}
-          <div className="mb-8 inline-block">
+          <AnimatedSection animation="scaleIn" duration="slow" className="mb-8 inline-block">
             <div className="bg-white/25 backdrop-blur-sm rounded-3xl px-12 py-6">
               <h1 className="text-7xl md:text-8xl font-bold text-white tracking-wider">
                 {tBrand('name')}
               </h1>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Tagline */}
-          <p className="text-2xl md:text-3xl text-white/95 font-light mb-8 tracking-wide">
+          <AnimatedText
+            animation="fadeInUp"
+            delay={200}
+            className="text-2xl md:text-3xl text-white/95 font-light mb-8 tracking-wide"
+          >
             {tBrand('tagline')}
-          </p>
+          </AnimatedText>
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <AnimatedHeading
+            level={2}
+            animation="fadeInUp"
+            delay={300}
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+          >
             {tHero('headline')}
-          </h2>
+          </AnimatedHeading>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <AnimatedText
+            animation="fadeInUp"
+            delay={400}
+            className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
+          >
             {tBrand('description')}
-          </p>
+          </AnimatedText>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <AnimatedSection
+            animation="fadeInUp"
+            delay={500}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
             <Button
               size="lg"
               className="bg-tertiary hover:bg-tertiary-dark text-white shadow-2xl"
@@ -77,15 +95,15 @@ const Hero = () => {
               size="lg"
               className="border-white text-white hover:bg-white/10 hover:border-white/80 backdrop-blur-sm"
               onClick={() => {
-                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               {tHero('ctaLearnMore')}
             </Button>
-          </div>
+          </AnimatedSection>
 
           {/* Stats preview */}
-          <div className="mt-16 flex flex-wrap justify-center gap-8 text-white">
+          <AnimatedSection animation="fadeIn" delay={600} className="mt-16 flex flex-wrap justify-center gap-8 text-white">
             <div className="text-center">
               <div className="text-3xl font-bold">1,000+</div>
               <div className="text-sm text-white/80">{tHero('statsUsers')}</div>
@@ -98,7 +116,7 @@ const Hero = () => {
               <div className="text-3xl font-bold">4.8 ⭐</div>
               <div className="text-sm text-white/80">{tHero('statsRating')}</div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
 

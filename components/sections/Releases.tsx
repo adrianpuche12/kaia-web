@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { RELEASES } from '@/lib/constants';
+import { AnimatedHeading, AnimatedText, AnimatedSection } from '../animated';
 
 const Releases = () => {
   const t = useTranslations('releases');
@@ -77,19 +78,21 @@ const Releases = () => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <AnimatedHeading level={2} animation="fadeInUp" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {t('title')}
-            </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            </AnimatedHeading>
+            <AnimatedText animation="fadeInUp" delay={100} className="text-xl text-gray-700 max-w-2xl mx-auto">
               {t('subtitle')}
-            </p>
+            </AnimatedText>
           </div>
 
           {/* Releases List */}
           <div className="space-y-6">
-            {RELEASES.map((release) => (
-              <div
+            {RELEASES.map((release, index) => (
+              <AnimatedSection
                 key={release.id}
+                animation="fadeInUp"
+                delay={100 * (index + 2)}
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
                 <div className="p-6 md:p-8">
@@ -172,7 +175,7 @@ const Releases = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
 

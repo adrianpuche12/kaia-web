@@ -29,7 +29,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: t('home'), href: 'hero' },
-    { label: t('features'), href: 'features' },
+    { label: t('features'), href: 'how-it-works' },
     { label: t('techStack'), href: 'tech-stack' },
     { label: t('stats'), href: 'stats' },
     { label: t('releases'), href: 'releases' },
@@ -41,9 +41,14 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white/75 backdrop-blur-xl backdrop-saturate-150 shadow-lg border-b border-white/20'
+          : 'bg-white/10 backdrop-blur-md'
       }`}
+      style={{
+        boxShadow: isScrolled
+          ? '0 4px 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(255, 255, 255, 0.1) inset'
+          : 'none'
+      }}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">

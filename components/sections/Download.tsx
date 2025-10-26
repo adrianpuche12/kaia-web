@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import { DOWNLOAD_LINKS } from '@/lib/constants';
+import { AnimatedHeading, AnimatedText, AnimatedSection } from '../animated';
 
 const Download = () => {
   const t = useTranslations('download');
@@ -31,15 +32,15 @@ const Download = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <AnimatedHeading level={2} animation="fadeInUp" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t('title')}
-          </h2>
-          <p className="text-xl text-gray-700 mb-12">
+          </AnimatedHeading>
+          <AnimatedText animation="fadeInUp" delay={100} className="text-xl text-gray-700 mb-12">
             {t('subtitle')}
-          </p>
+          </AnimatedText>
 
           {/* Download Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <AnimatedSection animation="fadeInUp" delay={200} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             {/* Google Play */}
             <button
               onClick={() => handleDownload('android')}
@@ -69,10 +70,10 @@ const Download = () => {
                 <div className="text-sm font-semibold">App Store</div>
               </div>
             </button>
-          </div>
+          </AnimatedSection>
 
           {/* Direct APK Download */}
-          <div className="mb-12">
+          <AnimatedSection animation="fadeInUp" delay={300} className="mb-12">
             <p className="text-sm text-gray-700 mb-4">
               {t('directDownload')}
             </p>
@@ -96,10 +97,10 @@ const Download = () => {
               </svg>
               {t('viewAllVersions')}
             </Button>
-          </div>
+          </AnimatedSection>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-8 max-w-md mx-auto pt-8 border-t border-gray-200">
+          <AnimatedSection animation="fadeIn" delay={400} className="grid grid-cols-2 gap-8 max-w-md mx-auto pt-8 border-t border-gray-200">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary">5,000+</div>
               <div className="text-sm text-gray-700 mt-1">{t('downloads')}</div>
@@ -108,7 +109,7 @@ const Download = () => {
               <div className="text-3xl font-bold text-primary">4.8 ⭐</div>
               <div className="text-sm text-gray-700 mt-1">{t('rating')}</div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

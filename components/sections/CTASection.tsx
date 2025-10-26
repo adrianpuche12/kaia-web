@@ -3,6 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
+import { AnimatedHeading, AnimatedText, AnimatedSection } from '../animated';
 
 const CTASection = () => {
   const t = useTranslations('cta');
@@ -19,14 +20,14 @@ const CTASection = () => {
     <section className="py-20 bg-gradient-primary">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <AnimatedHeading level={2} animation="fadeInUp" className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('title')}
-          </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          </AnimatedHeading>
+          <AnimatedText animation="fadeInUp" delay={100} className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
             {t('subtitle')}
-          </p>
+          </AnimatedText>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <AnimatedSection animation="fadeInUp" delay={200} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-primary hover:bg-gray-100 shadow-xl transition-all duration-200"
               onClick={handleDownload}
@@ -70,10 +71,10 @@ const CTASection = () => {
               </svg>
               Documentation
             </Button>
-          </div>
+          </AnimatedSection>
 
           {/* Features highlight */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white">
+          <AnimatedSection animation="fadeIn" delay={300} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white">
             <div className="flex flex-col items-center">
               <div className="text-4xl mb-2">🎤</div>
               <div className="text-sm font-medium">Natural voice</div>
@@ -90,7 +91,7 @@ const CTASection = () => {
               <div className="text-4xl mb-2">🆓</div>
               <div className="text-sm font-medium">Free</div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

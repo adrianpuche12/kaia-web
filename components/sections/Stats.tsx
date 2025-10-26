@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { AnimatedHeading } from '../animated';
 
 const Stats = () => {
   const t = useTranslations('stats');
@@ -42,9 +43,9 @@ const Stats = () => {
     <section id="stats" ref={sectionRef} className="py-20 bg-gradient-primary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <AnimatedHeading level={2} animation="fadeInUp" className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('title')}
-          </h2>
+          </AnimatedHeading>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">

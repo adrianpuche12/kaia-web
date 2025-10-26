@@ -30,18 +30,16 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     triggerOnce: true,
   });
 
-  const Tag = as;
-
   const delayClass = delay > 0 ? styles[`delay-${delay}`] : '';
   const durationClass = styles[`duration-${duration}`];
   const animationClass = isVisible ? styles[animation] : styles.animated;
 
-  return (
-    <Tag
-      ref={elementRef as any}
-      className={`${className} ${animationClass} ${delayClass} ${durationClass}`}
-    >
-      {children}
-    </Tag>
-  );
+  const textProps = {
+    ref: elementRef as any,
+    className: `${className} ${animationClass} ${delayClass} ${durationClass}`,
+  };
+
+  if (as === 'p') return <p {...textProps}>{children}</p>;
+  if (as === 'span') return <span {...textProps}>{children}</span>;
+  return <div {...textProps}>{children}</div>;
 };

@@ -169,5 +169,66 @@
     "title": "Kaia - Tu asistente personal inteligente por voz",
     "description": "Gestiona tu vida diaria con comandos de voz naturales. Eventos, recordatorios, alarmas y más con IA contextual. Disponible para Android.",
     "keywords": "asistente personal, voz, IA, agenda, eventos, recordatorios, alarmas, android, app"
+  },
+  "common": {
+    "learnMore": "Ver más"
+  },
+  "featureDetails": {
+    "events": {
+      "fullDescription": {
+        "title": "Descripción Completa",
+        "intro": "La gestión inteligente de eventos de Kaia revoluciona la forma en que organizas tu día a día. Con tecnología de IA avanzada, Kaia no solo registra tus eventos, sino que entiende el contexto completo: ubicación, duración, participantes y prioridad.",
+        "details": "Utilizando procesamiento de lenguaje natural, puedes crear eventos complejos con un simple comando de voz. Kaia extrae automáticamente toda la información relevante: fecha, hora, lugar, y hasta detecta conflictos con otros eventos en tu agenda. La app aprende de tus patrones y te sugiere los mejores momentos para programar actividades según tu rutina habitual."
+      },
+      "howToUse": {
+        "title": "¿Cómo encontrar esta funcionalidad en tu app Kaia?",
+        "subtitle": "Sigue estos pasos para acceder y usar la gestión de eventos:",
+        "steps": {
+          "step1": {
+            "title": "Abre la app Kaia",
+            "description": "Inicia sesión en tu cuenta de Kaia. Si es tu primera vez, completa el proceso de registro que solo toma unos minutos."
+          },
+          "step2": {
+            "title": "Ve a la sección 'Agenda'",
+            "description": "En la pantalla principal, toca el ícono de calendario en la barra de navegación inferior. Aquí verás todos tus eventos programados."
+          },
+          "step3": {
+            "title": "Crea un nuevo evento",
+            "description": "Presiona el botón '+' o usa el comando de voz diciendo 'Kaia, crea un evento'. Di naturalmente los detalles del evento, por ejemplo: 'Reunión con el equipo mañana a las 3 PM en la oficina'."
+          },
+          "step4": {
+            "title": "Confirma y gestiona",
+            "description": "Kaia procesará tu solicitud y te mostrará los detalles extraídos. Confirma o edita según necesites. Tus eventos se sincronizan automáticamente y recibirás recordatorios inteligentes."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Características Principales",
+        "features": {
+          "feature1": {
+            "title": "Contexto Automático de Ubicación",
+            "description": "Kaia detecta automáticamente direcciones y lugares mencionados en tus comandos de voz, integrándose con Google Maps para sugerencias de ubicación precisas."
+          },
+          "feature2": {
+            "title": "Detección de Conflictos",
+            "description": "La IA revisa tu agenda completa y te alerta inmediatamente si intentas programar un evento que se superpone con otro compromiso existente."
+          },
+          "feature3": {
+            "title": "Recordatorios Inteligentes",
+            "description": "Basándose en el tipo de evento, la ubicación y el tráfico en tiempo real, Kaia calcula el momento óptimo para enviarte recordatorios y asegurarte de llegar a tiempo."
+          },
+          "feature4": {
+            "title": "Sugerencias Contextuales",
+            "description": "Kaia aprende de tus patrones: tus horarios preferidos para reuniones, cuánto tiempo sueles dedicar a cada tipo de actividad, y te ayuda a optimizar tu agenda."
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para probar esta funcionalidad?",
+      "subtitle": "Descarga Kaia y comienza a gestionar tus eventos de manera inteligente",
+      "downloadButton": "Descargar Kaia",
+      "learnMoreButton": "Ver más funcionalidades"
+    }
   }
 }

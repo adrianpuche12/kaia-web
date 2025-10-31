@@ -169,5 +169,66 @@
     "title": "Kaia - Your intelligent voice personal assistant",
     "description": "Manage your daily life with natural voice commands. Events, reminders, alarms and more with contextual AI. Available for Android.",
     "keywords": "personal assistant, voice, AI, calendar, events, reminders, alarms, android, app"
+  },
+  "common": {
+    "learnMore": "Learn more"
+  },
+  "featureDetails": {
+    "events": {
+      "fullDescription": {
+        "title": "Full Description",
+        "intro": "Kaia's smart event management revolutionizes the way you organize your day-to-day life. With advanced AI technology, Kaia not only records your events but understands the complete context: location, duration, participants, and priority.",
+        "details": "Using natural language processing, you can create complex events with a simple voice command. Kaia automatically extracts all relevant information: date, time, location, and even detects conflicts with other events in your schedule. The app learns from your patterns and suggests the best times to schedule activities based on your usual routine."
+      },
+      "howToUse": {
+        "title": "How to find this feature in your Kaia app?",
+        "subtitle": "Follow these steps to access and use event management:",
+        "steps": {
+          "step1": {
+            "title": "Open the Kaia app",
+            "description": "Sign in to your Kaia account. If it's your first time, complete the registration process which only takes a few minutes."
+          },
+          "step2": {
+            "title": "Go to the 'Agenda' section",
+            "description": "On the main screen, tap the calendar icon in the bottom navigation bar. Here you'll see all your scheduled events."
+          },
+          "step3": {
+            "title": "Create a new event",
+            "description": "Press the '+' button or use the voice command by saying 'Kaia, create an event'. Naturally speak the event details, for example: 'Meeting with the team tomorrow at 3 PM at the office'."
+          },
+          "step4": {
+            "title": "Confirm and manage",
+            "description": "Kaia will process your request and show you the extracted details. Confirm or edit as needed. Your events sync automatically and you'll receive smart reminders."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "feature1": {
+            "title": "Automatic Location Context",
+            "description": "Kaia automatically detects addresses and places mentioned in your voice commands, integrating with Google Maps for precise location suggestions."
+          },
+          "feature2": {
+            "title": "Conflict Detection",
+            "description": "The AI reviews your entire schedule and immediately alerts you if you try to schedule an event that overlaps with another existing commitment."
+          },
+          "feature3": {
+            "title": "Smart Reminders",
+            "description": "Based on event type, location, and real-time traffic, Kaia calculates the optimal time to send you reminders and ensure you arrive on time."
+          },
+          "feature4": {
+            "title": "Contextual Suggestions",
+            "description": "Kaia learns from your patterns: your preferred meeting times, how much time you usually dedicate to each type of activity, and helps you optimize your schedule."
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to try this feature?",
+      "subtitle": "Download Kaia and start managing your events intelligently",
+      "downloadButton": "Download Kaia",
+      "learnMoreButton": "See more features"
+    }
   }
 }

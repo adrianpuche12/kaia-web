@@ -338,16 +338,18 @@ export default function FeatureDetailPage() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${gradient.glow} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm`}></div>
 
                       {/* Card content */}
-                      <div className="relative h-full p-6 md:p-8 rounded-2xl bg-white border-2 border-gray-200 group-hover:border-transparent shadow-lg group-hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                      <div className="relative h-full p-4 md:p-6 lg:p-8 rounded-2xl bg-white border-2 border-gray-200 group-hover:border-transparent shadow-lg group-hover:shadow-2xl transition-all duration-300 overflow-hidden">
                         {/* Icon */}
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${gradient.badge} flex items-center justify-center text-white mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg flex-shrink-0`}>
-                          {icons[index]}
+                        <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${gradient.badge} flex items-center justify-center text-white mb-4 md:mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg flex-shrink-0`}>
+                          <div className="scale-75 md:scale-100">
+                            {icons[index]}
+                          </div>
                         </div>
 
-                        <h3 className={`text-xl md:text-2xl font-bold text-gray-900 mb-4 group-hover:bg-gradient-to-r ${gradient.badge} group-hover:bg-clip-text group-hover:text-transparent transition-colors break-words`}>
+                        <h3 className={`text-base md:text-xl lg:text-2xl font-bold text-gray-900 mb-2 md:mb-4 group-hover:bg-gradient-to-r ${gradient.badge} group-hover:bg-clip-text group-hover:text-transparent transition-colors break-words`}>
                           {t(`${featureId}.keyFeatures.features.feature${feature}.title`)}
                         </h3>
-                        <p className="text-lg text-gray-700 leading-relaxed break-words">
+                        <p className="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed break-words">
                           {t(`${featureId}.keyFeatures.features.feature${feature}.description`)}
                         </p>
 

@@ -129,8 +129,8 @@ const HowItWorks = () => {
                 delay={100 * (index + 1)}
                 className="w-full"
               >
-                {/* Sección estilizada con banner de colores Kaia */}
-                <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${borderGradients[feature.key]} p-1`}>
+                {/* Sección estilizada con banner de colores Kaia - bordes difuminados */}
+                <div className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${borderGradients[feature.key]} p-1 shadow-xl opacity-60`}>
                   {/* Contenedor interno con fondo blanco */}
                   <div className="relative bg-white rounded-[calc(1.5rem-4px)] overflow-hidden">
                     {/* Decorative background elements */}
@@ -187,13 +187,13 @@ const HowItWorks = () => {
                           {t(`items.${feature.key}.description`)}
                         </p>
 
-                        {/* Button */}
+                        {/* Button - Tamaño ajustado para mobile */}
                         <button
                           onClick={() => router.push(`/${locale}/features/${feature.key}`)}
                           className={`
-                            inline-flex items-center gap-2 px-8 py-4 rounded-full
+                            inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 rounded-full
                             bg-gradient-to-r ${borderGradients[feature.key]}
-                            text-white font-bold text-lg
+                            text-white font-bold text-sm md:text-lg
                             shadow-xl hover:shadow-2xl
                             transform hover:scale-105
                             transition-all duration-300

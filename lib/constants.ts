@@ -191,7 +191,8 @@ export const SOCIAL_LINKS = {
 export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c024f976-b73f-48b7-bf09-98707f156822',
+  // Auto-downloads the latest Android release from GitHub
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/latest/download/kaia-v1.1.0-android.apk',
 };
 
 // Releases/Available versions
@@ -202,9 +203,9 @@ export const RELEASES = [
     buildNumber: 2,
     date: '2025-10-31',
     platform: 'Android',
-    size: '68.2 MB',
-    // Direct download from Expo (latest build with push notifications)
-    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c024f976-b73f-48b7-bf09-98707f156822',
+    size: '88 MB',
+    // Direct download from GitHub Releases (latest stable version)
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.0/kaia-v1.1.0-android.apk',
     status: 'stable',
     notes: [
       'Push notifications implemented',

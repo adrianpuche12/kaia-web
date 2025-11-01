@@ -1,14 +1,19 @@
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/shared/Navbar';
 import Hero from '@/components/sections/Hero';
-import HowItWorks from '@/components/sections/HowItWorks';
-import TechStack from '@/components/sections/TechStack';
-import Stats from '@/components/sections/Stats';
-import Download from '@/components/sections/Download';
-import Releases from '@/components/sections/Releases';
-import Changelog from '@/components/sections/Changelog';
-import FAQSection from '@/components/sections/FAQ';
-import CTASection from '@/components/sections/CTASection';
-import Footer from '@/components/sections/Footer';
+
+// Lazy load heavy components
+const HowItWorks = dynamic(() => import('@/components/sections/HowItWorks'), {
+  loading: () => <div className="h-screen flex items-center justify-center">Loading...</div>,
+});
+const TechStack = dynamic(() => import('@/components/sections/TechStack'));
+const Stats = dynamic(() => import('@/components/sections/Stats'));
+const Download = dynamic(() => import('@/components/sections/Download'));
+const Releases = dynamic(() => import('@/components/sections/Releases'));
+const Changelog = dynamic(() => import('@/components/sections/Changelog'));
+const FAQSection = dynamic(() => import('@/components/sections/FAQ'));
+const CTASection = dynamic(() => import('@/components/sections/CTASection'));
+const Footer = dynamic(() => import('@/components/sections/Footer'));
 
 export default function Home() {
   return (

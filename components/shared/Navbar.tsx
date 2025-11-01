@@ -41,8 +41,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/75 backdrop-blur-xl backdrop-saturate-150 shadow-lg border-b border-white/20'
-          : 'bg-white/10 backdrop-blur-md'
+          ? 'bg-white/60 backdrop-blur-xl backdrop-saturate-150 shadow-lg border-b border-white/20'
+          : 'bg-white/5 backdrop-blur-md'
       }`}
       style={{
         boxShadow: isScrolled
@@ -53,8 +53,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div
-            onClick={() => scrollToSection('hero')}
+          <a
+            href="/"
             className="flex items-center cursor-pointer"
           >
             <span
@@ -65,13 +65,13 @@ const Navbar = () => {
               Kaia
             </span>
             <span
-              className={`ml-2 text-sm hidden sm:inline transition-colors ${
+              className={`ml-2 text-sm inline transition-colors ${
                 isScrolled ? 'text-gray-600' : 'text-white/80'
               }`}
             >
               Su asistente ideal
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
@@ -134,12 +134,16 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg rounded-lg mt-2 py-4">
+          <div className="md:hidden bg-white/60 backdrop-blur-xl backdrop-saturate-150 shadow-lg rounded-lg mt-2 py-4 border border-white/20">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-4 py-3 text-sm font-medium text-gray-900 hover:bg-muted transition-colors"
+                className={`block w-full text-left px-4 py-3 text-sm font-medium transition-colors ${
+                  isScrolled
+                    ? 'text-gray-900 hover:text-primary hover:bg-white/30'
+                    : 'text-white hover:text-white/80 hover:bg-white/10'
+                }`}
               >
                 {link.label}
               </button>

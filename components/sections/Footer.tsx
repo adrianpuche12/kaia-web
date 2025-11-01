@@ -2,12 +2,22 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { SOCIAL_LINKS } from '@/lib/constants';
 
 const Footer = () => {
   const t = useTranslations('footer');
   const tBrand = useTranslations('brand');
+  const params = useParams();
+  const locale = params.locale as string;
   const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -24,19 +34,19 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t('sections.product')}</h4>
             <ul className="space-y-2 text-white/70">
               <li>
-                <a href="#features" className="hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('how-it-works')} className="hover:text-white transition-colors">
                   {t('links.features')}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#download" className="hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('releases')} className="hover:text-white transition-colors">
                   {t('links.download')}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('changelog')} className="hover:text-white transition-colors">
                   {t('links.pricing')}
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -78,17 +88,17 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">{t('sections.legal')}</h4>
             <ul className="space-y-2 text-white/70">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  {t('links.terms')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href={`/${locale}/privacy`} className="hover:text-white transition-colors">
                   {t('links.privacy')}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href={`/${locale}/privacy`} className="hover:text-white transition-colors">
+                  {t('links.terms')}
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@kaia.app" className="hover:text-white transition-colors">
                   {t('links.contact')}
                 </a>
               </li>

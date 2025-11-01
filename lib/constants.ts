@@ -191,11 +191,29 @@ export const SOCIAL_LINKS = {
 export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/8345a8ea-847e-4372-9068-4e4876fa091c',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c024f976-b73f-48b7-bf09-98707f156822',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'c024f976-b73f-48b7-bf09-98707f156822',
+    version: '1.1.0',
+    buildNumber: 2,
+    date: '2025-10-31',
+    platform: 'Android',
+    size: '68.2 MB',
+    // Direct download from Expo (latest build with push notifications)
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c024f976-b73f-48b7-bf09-98707f156822',
+    status: 'stable',
+    notes: [
+      'Push notifications implemented',
+      'Expo notifications integrated',
+      'Android notification permissions',
+      'Test notification buttons in Agenda',
+      'Backend ready for push integration',
+    ],
+  },
   {
     id: '8345a8ea-847e-4372-9068-4e4876fa091c',
     version: '1.0.0',
@@ -203,31 +221,15 @@ export const RELEASES = [
     date: '2025-10-18',
     platform: 'Android',
     size: '65.4 MB',
-    // Direct download URL from GitHub Releases
+    // Old version
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.0.0/application-8345a8ea-847e-4372-9068-4e4876fa091c.apk',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
       'Initial MVP version',
       '7 complete screens',
       'JWT authentication',
       'Backend API integration',
       'Natural voice commands',
-    ],
-  },
-  {
-    id: 'beta-1.1.0',
-    version: '1.1.0-beta',
-    buildNumber: 2,
-    date: '2025-10-24',
-    platform: 'Android',
-    size: '29.2 MB',
-    downloadUrl: '#',
-    status: 'beta',
-    notes: [
-      'UI improvements',
-      'Performance optimization',
-      'Minor bug fixes',
-      'New animations',
     ],
   },
 ];

@@ -224,6 +224,256 @@
         }
       }
     },
+    "voice": {
+      "fullDescription": {
+        "title": "Descripción Completa",
+        "intro": "Kaia entiende tu voz de forma natural. No necesitas memorizar comandos complicados ni usar palabras clave específicas.",
+        "details": "Simplemente habla como lo harías con un amigo. Kaia procesa tu lenguaje natural y extrae lo importante: fechas, horas, lugares y tareas."
+      },
+      "howToUse": {
+        "title": "¿Cómo usar comandos de voz?",
+        "subtitle": "Habla naturalmente con Kaia:",
+        "steps": {
+          "step1": {
+            "title": "Activa Kaia",
+            "description": "Toca el ícono de micrófono o di 'Hola Kaia'."
+          },
+          "step2": {
+            "title": "Habla naturalmente",
+            "description": "Di lo que necesites: 'Recuérdame comprar leche mañana' o 'Reunión con Ana el lunes'."
+          },
+          "step3": {
+            "title": "Kaia procesa tu solicitud",
+            "description": "La IA extrae fecha, hora, lugar y detalles automáticamente."
+          },
+          "step4": {
+            "title": "Confirma o edita",
+            "description": "Revisa los detalles y confirma. Kaia aprende de cada interacción."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Características Principales",
+        "features": {
+          "feature1": {
+            "title": "Lenguaje Natural",
+            "description": "Habla como lo harías normalmente. Sin comandos especiales."
+          },
+          "feature2": {
+            "title": "Reconocimiento Preciso",
+            "description": "Alta precisión incluso con acentos o ruido de fondo."
+          },
+          "feature3": {
+            "title": "Extracción Inteligente",
+            "description": "Detecta automáticamente fechas, horas y ubicaciones."
+          },
+          "feature4": {
+            "title": "Aprende de Ti",
+            "description": "Mejora con cada comando que usas."
+          }
+        }
+      }
+    },
+    "alarms": {
+      "fullDescription": {
+        "title": "Descripción Completa",
+        "intro": "Las alarmas de Kaia son inteligentes. Se adaptan a tu ubicación, contexto y rutina diaria.",
+        "details": "Kaia puede activar alarmas basadas en dónde estás, no solo cuándo. Olvídate de olvidar cosas importantes."
+      },
+      "howToUse": {
+        "title": "¿Cómo crear alarmas inteligentes?",
+        "subtitle": "Crea recordatorios contextuales:",
+        "steps": {
+          "step1": {
+            "title": "Abre la sección Alarmas",
+            "description": "Toca el ícono de campana en el menú principal."
+          },
+          "step2": {
+            "title": "Crea una nueva alarma",
+            "description": "Di por voz o escribe: 'Recuérdame llamar a mamá cuando llegue a casa'."
+          },
+          "step3": {
+            "title": "Define el contexto",
+            "description": "Elige si quieres alarma por tiempo, ubicación o ambos."
+          },
+          "step4": {
+            "title": "Activa y olvídate",
+            "description": "Kaia te avisará en el momento perfecto."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Características Principales",
+        "features": {
+          "feature1": {
+            "title": "Alarmas por Ubicación",
+            "description": "Recibe avisos al llegar o salir de un lugar."
+          },
+          "feature2": {
+            "title": "Repetición Inteligente",
+            "description": "Configura patrones personalizados de repetición."
+          },
+          "feature3": {
+            "title": "Priorización Automática",
+            "description": "Kaia sabe cuáles alarmas son más importantes."
+          },
+          "feature4": {
+            "title": "Sincronización Total",
+            "description": "Tus alarmas disponibles en todos tus dispositivos."
+          }
+        }
+      }
+    },
+    "messaging": {
+      "fullDescription": {
+        "title": "Descripción Completa",
+        "intro": "Recibe notificaciones por WhatsApp, SMS o Email. Tú eliges cómo comunicarte con Kaia.",
+        "details": "Responde a tus recordatorios directamente por mensaje. Kaia actualiza todo automáticamente."
+      },
+      "howToUse": {
+        "title": "¿Cómo configurar mensajería?",
+        "subtitle": "Conecta tus canales favoritos:",
+        "steps": {
+          "step1": {
+            "title": "Ve a Configuración",
+            "description": "Abre el menú y selecciona 'Notificaciones'."
+          },
+          "step2": {
+            "title": "Elige tus canales",
+            "description": "Activa WhatsApp, SMS o Email según prefieras."
+          },
+          "step3": {
+            "title": "Personaliza preferencias",
+            "description": "Decide qué tipo de avisos quieres recibir por cada canal."
+          },
+          "step4": {
+            "title": "Recibe y responde",
+            "description": "Interactúa con Kaia desde tu app de mensajería favorita."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Características Principales",
+        "features": {
+          "feature1": {
+            "title": "Multi-Canal",
+            "description": "WhatsApp, SMS y Email en un solo lugar."
+          },
+          "feature2": {
+            "title": "Respuestas Rápidas",
+            "description": "Confirma o pospone recordatorios por mensaje."
+          },
+          "feature3": {
+            "title": "Notificaciones Inteligentes",
+            "description": "Solo recibes lo importante, sin spam."
+          },
+          "feature4": {
+            "title": "Encriptación Segura",
+            "description": "Tus mensajes están protegidos end-to-end."
+          }
+        }
+      }
+    },
+    "geolocation": {
+      "fullDescription": {
+        "title": "Descripción Completa",
+        "intro": "Kaia conoce tus lugares frecuentes: casa, trabajo, gimnasio. Usa esta información para ayudarte mejor.",
+        "details": "Sugerencias de eventos según dónde estás. Recordatorios al llegar o salir de lugares importantes."
+      },
+      "howToUse": {
+        "title": "¿Cómo funciona la geolocalización?",
+        "subtitle": "Kaia aprende tus ubicaciones:",
+        "steps": {
+          "step1": {
+            "title": "Activa permisos",
+            "description": "Permite a Kaia acceder a tu ubicación."
+          },
+          "step2": {
+            "title": "Kaia aprende automáticamente",
+            "description": "La app detecta tus lugares frecuentes sin configuración manual."
+          },
+          "step3": {
+            "title": "Etiqueta ubicaciones",
+            "description": "Asigna nombres como 'Casa', 'Trabajo', 'Gimnasio'."
+          },
+          "step4": {
+            "title": "Usa recordatorios por lugar",
+            "description": "Di 'Recuérdame comprar cuando esté cerca del supermercado'."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Características Principales",
+        "features": {
+          "feature1": {
+            "title": "Lugares Frecuentes",
+            "description": "Kaia aprende automáticamente dónde pasas más tiempo."
+          },
+          "feature2": {
+            "title": "Geocercas Inteligentes",
+            "description": "Crea zonas para activar recordatorios automáticos."
+          },
+          "feature3": {
+            "title": "Sugerencias Contextuales",
+            "description": "Eventos sugeridos según tu ubicación actual."
+          },
+          "feature4": {
+            "title": "Privacidad Primero",
+            "description": "Tu ubicación nunca se comparte con terceros."
+          }
+        }
+      }
+    },
+    "ai": {
+      "fullDescription": {
+        "title": "Descripción Completa",
+        "intro": "La IA de Kaia aprende de tus hábitos y preferencias. Mejora cada día que la usas.",
+        "details": "Predicciones inteligentes, sugerencias personalizadas y automatización basada en tu comportamiento."
+      },
+      "howToUse": {
+        "title": "¿Cómo funciona la IA de Kaia?",
+        "subtitle": "La IA trabaja en segundo plano:",
+        "steps": {
+          "step1": {
+            "title": "Usa Kaia normalmente",
+            "description": "No necesitas hacer nada especial. La IA aprende automáticamente."
+          },
+          "step2": {
+            "title": "La IA analiza patrones",
+            "description": "Detecta tus rutinas, horarios preferidos y hábitos."
+          },
+          "step3": {
+            "title": "Recibe sugerencias",
+            "description": "Kaia te propone acciones basadas en tu comportamiento."
+          },
+          "step4": {
+            "title": "La IA mejora continuamente",
+            "description": "Cada interacción hace a Kaia más inteligente."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Características Principales",
+        "features": {
+          "feature1": {
+            "title": "Aprendizaje Automático",
+            "description": "Kaia se adapta a tu estilo de vida sin configuración."
+          },
+          "feature2": {
+            "title": "Predicciones Inteligentes",
+            "description": "Anticipa lo que necesitas antes de que lo pidas."
+          },
+          "feature3": {
+            "title": "Automatización Contextual",
+            "description": "Acciones automáticas basadas en tiempo, lugar y hábitos."
+          },
+          "feature4": {
+            "title": "Privacidad Total",
+            "description": "Tu información personal nunca sale de tu dispositivo."
+          }
+        }
+      }
+    },
     "cta": {
       "title": "¿Listo para probar esta funcionalidad?",
       "subtitle": "Descarga Kaia y comienza a gestionar tus eventos de manera inteligente",

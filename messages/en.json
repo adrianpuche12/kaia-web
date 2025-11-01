@@ -224,6 +224,256 @@
         }
       }
     },
+    "voice": {
+      "fullDescription": {
+        "title": "Full Description",
+        "intro": "Kaia understands your voice naturally. No need to memorize complex commands or use specific keywords.",
+        "details": "Simply speak as you would with a friend. Kaia processes your natural language and extracts what's important: dates, times, places, and tasks."
+      },
+      "howToUse": {
+        "title": "How to use voice commands?",
+        "subtitle": "Speak naturally with Kaia:",
+        "steps": {
+          "step1": {
+            "title": "Activate Kaia",
+            "description": "Tap the microphone icon or say 'Hey Kaia'."
+          },
+          "step2": {
+            "title": "Speak naturally",
+            "description": "Say what you need: 'Remind me to buy milk tomorrow' or 'Meeting with Anna on Monday'."
+          },
+          "step3": {
+            "title": "Kaia processes your request",
+            "description": "The AI automatically extracts date, time, place, and details."
+          },
+          "step4": {
+            "title": "Confirm or edit",
+            "description": "Review the details and confirm. Kaia learns from each interaction."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "feature1": {
+            "title": "Natural Language",
+            "description": "Speak as you normally would. No special commands."
+          },
+          "feature2": {
+            "title": "Accurate Recognition",
+            "description": "High precision even with accents or background noise."
+          },
+          "feature3": {
+            "title": "Smart Extraction",
+            "description": "Automatically detects dates, times, and locations."
+          },
+          "feature4": {
+            "title": "Learns from You",
+            "description": "Improves with every command you use."
+          }
+        }
+      }
+    },
+    "alarms": {
+      "fullDescription": {
+        "title": "Full Description",
+        "intro": "Kaia's alarms are smart. They adapt to your location, context, and daily routine.",
+        "details": "Kaia can trigger alarms based on where you are, not just when. Forget about forgetting important things."
+      },
+      "howToUse": {
+        "title": "How to create smart alarms?",
+        "subtitle": "Create contextual reminders:",
+        "steps": {
+          "step1": {
+            "title": "Open Alarms section",
+            "description": "Tap the bell icon in the main menu."
+          },
+          "step2": {
+            "title": "Create a new alarm",
+            "description": "Say by voice or type: 'Remind me to call mom when I get home'."
+          },
+          "step3": {
+            "title": "Define the context",
+            "description": "Choose if you want alarm by time, location, or both."
+          },
+          "step4": {
+            "title": "Activate and forget",
+            "description": "Kaia will notify you at the perfect time."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "feature1": {
+            "title": "Location-Based Alarms",
+            "description": "Get notified when arriving or leaving a place."
+          },
+          "feature2": {
+            "title": "Smart Repetition",
+            "description": "Set up custom repetition patterns."
+          },
+          "feature3": {
+            "title": "Auto Prioritization",
+            "description": "Kaia knows which alarms are most important."
+          },
+          "feature4": {
+            "title": "Full Sync",
+            "description": "Your alarms available on all your devices."
+          }
+        }
+      }
+    },
+    "messaging": {
+      "fullDescription": {
+        "title": "Full Description",
+        "intro": "Receive notifications via WhatsApp, SMS, or Email. You choose how to communicate with Kaia.",
+        "details": "Reply to your reminders directly by message. Kaia updates everything automatically."
+      },
+      "howToUse": {
+        "title": "How to set up messaging?",
+        "subtitle": "Connect your favorite channels:",
+        "steps": {
+          "step1": {
+            "title": "Go to Settings",
+            "description": "Open the menu and select 'Notifications'."
+          },
+          "step2": {
+            "title": "Choose your channels",
+            "description": "Enable WhatsApp, SMS, or Email as you prefer."
+          },
+          "step3": {
+            "title": "Customize preferences",
+            "description": "Decide what type of alerts you want to receive per channel."
+          },
+          "step4": {
+            "title": "Receive and reply",
+            "description": "Interact with Kaia from your favorite messaging app."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "feature1": {
+            "title": "Multi-Channel",
+            "description": "WhatsApp, SMS, and Email in one place."
+          },
+          "feature2": {
+            "title": "Quick Replies",
+            "description": "Confirm or snooze reminders by message."
+          },
+          "feature3": {
+            "title": "Smart Notifications",
+            "description": "You only receive what's important, no spam."
+          },
+          "feature4": {
+            "title": "Secure Encryption",
+            "description": "Your messages are protected end-to-end."
+          }
+        }
+      }
+    },
+    "geolocation": {
+      "fullDescription": {
+        "title": "Full Description",
+        "intro": "Kaia knows your frequent places: home, work, gym. It uses this information to help you better.",
+        "details": "Event suggestions based on where you are. Reminders when arriving or leaving important places."
+      },
+      "howToUse": {
+        "title": "How does geolocation work?",
+        "subtitle": "Kaia learns your locations:",
+        "steps": {
+          "step1": {
+            "title": "Enable permissions",
+            "description": "Allow Kaia to access your location."
+          },
+          "step2": {
+            "title": "Kaia learns automatically",
+            "description": "The app detects your frequent places without manual setup."
+          },
+          "step3": {
+            "title": "Tag locations",
+            "description": "Assign names like 'Home', 'Work', 'Gym'."
+          },
+          "step4": {
+            "title": "Use location reminders",
+            "description": "Say 'Remind me to buy when I'm near the supermarket'."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "feature1": {
+            "title": "Frequent Places",
+            "description": "Kaia automatically learns where you spend most time."
+          },
+          "feature2": {
+            "title": "Smart Geofences",
+            "description": "Create zones to trigger automatic reminders."
+          },
+          "feature3": {
+            "title": "Contextual Suggestions",
+            "description": "Suggested events based on your current location."
+          },
+          "feature4": {
+            "title": "Privacy First",
+            "description": "Your location is never shared with third parties."
+          }
+        }
+      }
+    },
+    "ai": {
+      "fullDescription": {
+        "title": "Full Description",
+        "intro": "Kaia's AI learns from your habits and preferences. It improves every day you use it.",
+        "details": "Smart predictions, personalized suggestions, and automation based on your behavior."
+      },
+      "howToUse": {
+        "title": "How does Kaia's AI work?",
+        "subtitle": "The AI works in the background:",
+        "steps": {
+          "step1": {
+            "title": "Use Kaia normally",
+            "description": "You don't need to do anything special. The AI learns automatically."
+          },
+          "step2": {
+            "title": "The AI analyzes patterns",
+            "description": "It detects your routines, preferred times, and habits."
+          },
+          "step3": {
+            "title": "Receive suggestions",
+            "description": "Kaia proposes actions based on your behavior."
+          },
+          "step4": {
+            "title": "The AI improves continuously",
+            "description": "Each interaction makes Kaia smarter."
+          }
+        }
+      },
+      "keyFeatures": {
+        "title": "Key Features",
+        "features": {
+          "feature1": {
+            "title": "Machine Learning",
+            "description": "Kaia adapts to your lifestyle without setup."
+          },
+          "feature2": {
+            "title": "Smart Predictions",
+            "description": "Anticipates what you need before you ask."
+          },
+          "feature3": {
+            "title": "Contextual Automation",
+            "description": "Automatic actions based on time, place, and habits."
+          },
+          "feature4": {
+            "title": "Total Privacy",
+            "description": "Your personal info never leaves your device."
+          }
+        }
+      }
+    },
     "cta": {
       "title": "Ready to try this feature?",
       "subtitle": "Download Kaia and start managing your events intelligently",

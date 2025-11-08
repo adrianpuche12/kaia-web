@@ -198,21 +198,39 @@ export const DOWNLOAD_LINKS = {
 // Releases/Available versions
 export const RELEASES = [
   {
+    id: '4474716c-1569-4213-b038-bf0fa0676fdf',
+    version: '1.1.1',
+    buildNumber: 3,
+    date: '2025-11-08',
+    platform: 'Android',
+    size: '87.8 MB',
+    // Production build - INSTALABLE en dispositivos reales
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.1/kaia-v1.1.1-production.apk',
+    status: 'stable',
+    notes: [
+      'APK firmado para producción - INSTALABLE',
+      'Solucionado problema de instalación en dispositivos',
+      'Push notifications implemented',
+      'Expo notifications integrated',
+      'Build optimizado con Gradle Release',
+    ],
+  },
+  {
     id: 'c024f976-b73f-48b7-bf09-98707f156822',
     version: '1.1.0',
     buildNumber: 2,
     date: '2025-10-31',
     platform: 'Android',
     size: '88 MB',
-    // Direct download from GitHub Releases (latest stable version)
+    // Versión con problemas de instalación
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.0/kaia-v1.1.0-android.apk',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
       'Push notifications implemented',
       'Expo notifications integrated',
       'Android notification permissions',
-      'Test notification buttons in Agenda',
-      'Backend ready for push integration',
+      'NOTA: Esta versión tiene problemas de instalación',
+      'Usar v1.1.1 en su lugar',
     ],
   },
   {

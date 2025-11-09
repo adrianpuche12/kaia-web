@@ -121,13 +121,25 @@ export const CHANGELOG = [
   },
   {
     version: 'v1.1',
-    date: 'Nov 2025',
+    date: '8 Nov 2025',
     title: 'Push Notifications',
-    status: 'pending',
+    status: 'completed',
     features: [
       'Push notifications with Expo',
-      'Recurring events (RRULE)',
-      'Background jobs (BullMQ)',
+      'Android notification permissions',
+      'Expo notifications integrated',
+    ],
+  },
+  {
+    version: 'v1.1.2',
+    date: '9 Nov 2025',
+    title: 'Navegación Mejorada',
+    status: 'completed',
+    features: [
+      'Solución overlap menú Android',
+      'Barra navegación modo inmersivo',
+      'Safe Area implementado',
+      'Ajuste dinámico tab bar',
     ],
   },
   {
@@ -198,6 +210,24 @@ export const DOWNLOAD_LINKS = {
 // Releases/Available versions
 export const RELEASES = [
   {
+    id: '8jxwQqtTT6uXUasotD9XWc',
+    version: '1.1.2',
+    buildNumber: 4,
+    date: '2025-11-09',
+    platform: 'Android',
+    size: '87.8 MB',
+    // Production build - Navegación mejorada
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.2/kaia-v1.1.2-production.apk',
+    status: 'stable',
+    notes: [
+      'Solucionado overlap del menú de navegación Android',
+      'Barra de navegación ahora se oculta automáticamente',
+      'Safe Area implementado para todos los dispositivos',
+      'Mejor experiencia en pantallas con gestos',
+      'Ajuste dinámico del tab bar',
+    ],
+  },
+  {
     id: '4474716c-1569-4213-b038-bf0fa0676fdf',
     version: '1.1.1',
     buildNumber: 3,
@@ -206,7 +236,7 @@ export const RELEASES = [
     size: '87.8 MB',
     // Production build - INSTALABLE en dispositivos reales
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.1/kaia-v1.1.1-production.apk',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
       'APK firmado para producción - INSTALABLE',
       'Solucionado problema de instalación en dispositivos',

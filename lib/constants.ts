@@ -210,6 +210,23 @@ export const DOWNLOAD_LINKS = {
 // Releases/Available versions
 export const RELEASES = [
   {
+    id: 't2BpDZgxKyyaHHMX1Q7Nas',
+    version: '1.1.3',
+    buildNumber: 4,
+    date: '2025-11-09',
+    platform: 'Android',
+    size: '87.8 MB',
+    // Preview build - Idéntico a v1.1.1 (test)
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.3/kaia-v1.1.3.apk',
+    status: 'stable',
+    notes: [
+      'Build de prueba - Idéntico a v1.1.1',
+      'Push notifications',
+      'Expo notifications integrado',
+      'Mismo perfil preview que v1.1.1',
+    ],
+  },
+  {
     id: '4DknyoTKroRnpk3iPJiK8m',
     version: '1.1.2',
     buildNumber: 4,
@@ -218,7 +235,7 @@ export const RELEASES = [
     size: '87.8 MB',
     // Preview build - Safe Area implementado
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.2/kaia-v1.1.2-safearea.apk',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
       'Safe Area implementado para todos los dispositivos',
       'Ajuste dinámico del tab bar con insets',

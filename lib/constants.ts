@@ -210,14 +210,14 @@ export const DOWNLOAD_LINKS = {
 // Releases/Available versions
 export const RELEASES = [
   {
-    id: '8jxwQqtTT6uXUasotD9XWc',
+    id: '4NUHj5wFJC53XSgzd5tVh3',
     version: '1.1.2',
-    buildNumber: 4,
+    buildNumber: 5,
     date: '2025-11-09',
     platform: 'Android',
     size: '87.8 MB',
-    // Production build - Navegación mejorada
-    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.2/kaia-v1.1.2-production.apk',
+    // Production build - Navegación mejorada + Fix instalación
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.2/kaia-v1.1.2-fixed.apk',
     status: 'stable',
     notes: [
       'Solucionado overlap del menú de navegación Android',
@@ -225,6 +225,7 @@ export const RELEASES = [
       'Safe Area implementado para todos los dispositivos',
       'Mejor experiencia en pantallas con gestos',
       'Ajuste dinámico del tab bar',
+      'Corregido problema de instalación (versionCode 5)',
     ],
   },
   {

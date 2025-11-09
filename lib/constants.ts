@@ -204,28 +204,11 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/latest/download/kaia-v1.1.0-android.apk',
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/latest/download/kaia-v1.1.2-safearea.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
-  {
-    id: 't2BpDZgxKyyaHHMX1Q7Nas',
-    version: '1.1.3',
-    buildNumber: 4,
-    date: '2025-11-09',
-    platform: 'Android',
-    size: '87.8 MB',
-    // Preview build - Idéntico a v1.1.1 (test)
-    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.3/kaia-v1.1.3.apk',
-    status: 'stable',
-    notes: [
-      'Build de prueba - Idéntico a v1.1.1',
-      'Push notifications',
-      'Expo notifications integrado',
-      'Mismo perfil preview que v1.1.1',
-    ],
-  },
   {
     id: '4DknyoTKroRnpk3iPJiK8m',
     version: '1.1.2',
@@ -233,14 +216,31 @@ export const RELEASES = [
     date: '2025-11-09',
     platform: 'Android',
     size: '87.8 MB',
-    // Preview build - Safe Area implementado
+    // VERSIÓN ESTABLE - Safe Area implementado
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.2/kaia-v1.1.2-safearea.apk',
-    status: 'deprecated',
+    status: 'stable',
     notes: [
       'Safe Area implementado para todos los dispositivos',
       'Ajuste dinámico del tab bar con insets',
       'Mejor manejo de áreas seguras',
       'Padding inteligente basado en dispositivo',
+      'SOLUCIÓN: Menú Samsung no tapa navegación de Kaia',
+    ],
+  },
+  {
+    id: 't2BpDZgxKyyaHHMX1Q7Nas',
+    version: '1.1.3',
+    buildNumber: 4,
+    date: '2025-11-09',
+    platform: 'Android',
+    size: '87.8 MB',
+    // DEPRECATED - Problema con menú Samsung
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.3/kaia-v1.1.3.apk',
+    status: 'deprecated',
+    notes: [
+      'DEPRECADO - Problema con menú de navegación Samsung',
+      'El menú del dispositivo tapa el menú de Kaia',
+      'Usar v1.1.2 en su lugar',
     ],
   },
   {

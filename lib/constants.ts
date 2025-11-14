@@ -143,7 +143,21 @@ export const CHANGELOG = [
     ],
   },
   {
-    version: 'v1.2',
+    version: 'v1.2.0',
+    date: '14 Nov 2025',
+    title: 'Comandos de Voz',
+    status: 'completed',
+    features: [
+      'Voice commands para crear eventos',
+      'Speech Recognition integrado',
+      'Text-to-Speech confirmaciones',
+      'Claude AI para procesamiento NLP',
+      'Sistema de fallback automático (Claude + Gemini)',
+      'Parseo de fechas naturales con chrono-node',
+    ],
+  },
+  {
+    version: 'v1.3',
     date: 'Dec 2025',
     title: 'App Stores',
     status: 'pending',
@@ -204,11 +218,32 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/latest/download/kaia-v1.1.2-safearea.apk',
+  apkDirect: 'https://expo.dev/artifacts/eas/ti3R3YFQbGzQ9XjcGHUzHe.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'dd082442-adc7-40da-9923-02a05bffd46b',
+    version: '1.2.0',
+    buildNumber: 5,
+    date: '2025-11-14',
+    platform: 'Android',
+    size: '87.8 MB',
+    // VERSIÓN ACTUAL - Comandos de voz implementados
+    downloadUrl: 'https://expo.dev/artifacts/eas/ti3R3YFQbGzQ9XjcGHUzHe.apk',
+    status: 'stable',
+    notes: [
+      'Comandos de voz para crear eventos',
+      'Speech Recognition con @jamsch/expo-speech-recognition',
+      'Text-to-Speech para confirmaciones audibles',
+      'Claude AI para procesamiento de lenguaje natural',
+      'Sistema de fallback automático (Claude → Gemini)',
+      'Parseo de fechas naturales con chrono-node',
+      'Feedback visual completo (escuchando, procesando, éxito)',
+      'Actualización automática de lista de eventos',
+    ],
+  },
   {
     id: '4DknyoTKroRnpk3iPJiK8m',
     version: '1.1.2',
@@ -216,9 +251,9 @@ export const RELEASES = [
     date: '2025-11-09',
     platform: 'Android',
     size: '87.8 MB',
-    // VERSIÓN ESTABLE - Safe Area implementado
+    // Safe Area implementado
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.1.2/kaia-v1.1.2-safearea.apk',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
       'Safe Area implementado para todos los dispositivos',
       'Ajuste dinámico del tab bar con insets',

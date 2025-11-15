@@ -158,6 +158,19 @@ export const CHANGELOG = [
   },
   {
     version: 'v1.3',
+    date: '15 Nov 2025',
+    title: 'Migración Contabo',
+    status: 'completed',
+    features: [
+      'Backend migrado a Contabo VPS',
+      'PostgreSQL 16.10 dedicado',
+      'PM2 cluster con 2 instancias',
+      'Nginx reverse proxy',
+      'Mayor estabilidad y rendimiento',
+    ],
+  },
+  {
+    version: 'v1.4',
     date: 'Dec 2025',
     title: 'App Stores',
     status: 'pending',
@@ -218,11 +231,31 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/artifacts/eas/ti3R3YFQbGzQ9XjcGHUzHe.apk',
+  apkDirect: 'https://expo.dev/artifacts/eas/fPgwBFUNzxGqPvtHDMEuzf.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'c00a37da-6406-44b1-9115-0e5e29fa37fe',
+    version: '1.3.0',
+    buildNumber: 6,
+    date: '2025-11-15',
+    platform: 'Android',
+    size: '88.2 MB',
+    // VERSIÓN ACTUAL - Migración a Contabo
+    downloadUrl: 'https://expo.dev/artifacts/eas/fPgwBFUNzxGqPvtHDMEuzf.apk',
+    status: 'stable',
+    notes: [
+      'Backend migrado a servidor Contabo VPS (62.171.160.238)',
+      'PostgreSQL 16.10 en servidor dedicado',
+      'PM2 cluster mode con 2 instancias',
+      'Nginx reverse proxy configurado',
+      'Todas las funcionalidades de v1.2.0 mantenidas',
+      'Comandos de voz funcionando',
+      'Mayor estabilidad y rendimiento',
+    ],
+  },
   {
     id: 'dd082442-adc7-40da-9923-02a05bffd46b',
     version: '1.2.0',
@@ -230,9 +263,9 @@ export const RELEASES = [
     date: '2025-11-14',
     platform: 'Android',
     size: '87.8 MB',
-    // VERSIÓN ACTUAL - Comandos de voz implementados
+    // Comandos de voz implementados
     downloadUrl: 'https://expo.dev/artifacts/eas/ti3R3YFQbGzQ9XjcGHUzHe.apk',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
       'Comandos de voz para crear eventos',
       'Speech Recognition con @jamsch/expo-speech-recognition',

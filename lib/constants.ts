@@ -231,7 +231,7 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/artifacts/eas/fPgwBFUNzxGqPvtHDMEuzf.apk',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c00a37da-6406-44b1-9115-0e5e29fa37fe',
 };
 
 // Releases/Available versions
@@ -244,7 +244,7 @@ export const RELEASES = [
     platform: 'Android',
     size: '88.2 MB',
     // VERSIÓN ACTUAL - Migración a Contabo
-    downloadUrl: 'https://expo.dev/artifacts/eas/fPgwBFUNzxGqPvtHDMEuzf.apk',
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c00a37da-6406-44b1-9115-0e5e29fa37fe',
     status: 'stable',
     notes: [
       'Backend migrado a servidor Contabo VPS (62.171.160.238)',

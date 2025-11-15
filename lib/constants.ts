@@ -231,11 +231,29 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/394e2c57-07a2-458c-9dd7-4ccfb0be1e31',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/45de435a-a272-4d3d-b0c4-fbb736a04356',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: '45de435a-a272-4d3d-b0c4-fbb736a04356',
+    version: '1.3.3',
+    buildNumber: 9,
+    date: '2025-11-15',
+    platform: 'Android',
+    size: '88.2 MB',
+    // VERSIÓN ACTUAL - HTTP cleartext traffic habilitado
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/45de435a-a272-4d3d-b0c4-fbb736a04356',
+    status: 'stable',
+    notes: [
+      'FIX: usesCleartextTraffic habilitado para permitir HTTP',
+      'Solucionado "network request failed" en Android',
+      'API URL correctamente configurada',
+      'Backend Contabo VPS (http://62.171.160.238:3003)',
+      'Registro y autenticación completamente funcionales',
+    ],
+  },
   {
     id: '394e2c57-07a2-458c-9dd7-4ccfb0be1e31',
     version: '1.3.2',
@@ -243,15 +261,13 @@ export const RELEASES = [
     date: '2025-11-15',
     platform: 'Android',
     size: '88.2 MB',
-    // VERSIÓN ACTUAL - API URL configurada correctamente
+    // API URL configurada pero HTTP bloqueado
     downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/394e2c57-07a2-458c-9dd7-4ccfb0be1e31',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
-      'FIX DEFINITIVO: API URL en app.json extra config',
-      'Ahora usa Constants.expoConfig.extra.apiUrl correctamente',
-      'Backend Contabo VPS funcionando (62.171.160.238:3003)',
-      'PostgreSQL 16.10 + PM2 cluster + Nginx',
-      'Registro y autenticación funcionando',
+      'DEPRECADO: Android bloqueaba tráfico HTTP',
+      'Error: "network request failed"',
+      'Usar v1.3.3 en su lugar',
     ],
   },
   {

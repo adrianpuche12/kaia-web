@@ -231,11 +231,30 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c00a37da-6406-44b1-9115-0e5e29fa37fe',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/ce29b577-d6ae-4c99-9545-1e8eaa91a744',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'ce29b577-d6ae-4c99-9545-1e8eaa91a744',
+    version: '1.3.1',
+    buildNumber: 7,
+    date: '2025-11-15',
+    platform: 'Android',
+    size: '88.2 MB',
+    // VERSIÓN ACTUAL - Fix API URL
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/ce29b577-d6ae-4c99-9545-1e8eaa91a744',
+    status: 'stable',
+    notes: [
+      'FIX: API URL ahora apunta correctamente a Contabo',
+      'Solucionado error "application failed to respond"',
+      'Backend en Contabo VPS (62.171.160.238:3003)',
+      'PostgreSQL 16.10 en servidor dedicado',
+      'PM2 cluster mode con 2 instancias',
+      'Todas las funcionalidades operativas',
+    ],
+  },
   {
     id: 'c00a37da-6406-44b1-9115-0e5e29fa37fe',
     version: '1.3.0',
@@ -243,17 +262,13 @@ export const RELEASES = [
     date: '2025-11-15',
     platform: 'Android',
     size: '88.2 MB',
-    // VERSIÓN ACTUAL - Migración a Contabo
+    // Migración a Contabo (URL incorrecta)
     downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/c00a37da-6406-44b1-9115-0e5e29fa37fe',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
-      'Backend migrado a servidor Contabo VPS (62.171.160.238)',
-      'PostgreSQL 16.10 en servidor dedicado',
-      'PM2 cluster mode con 2 instancias',
-      'Nginx reverse proxy configurado',
-      'Todas las funcionalidades de v1.2.0 mantenidas',
-      'Comandos de voz funcionando',
-      'Mayor estabilidad y rendimiento',
+      'DEPRECADO: API URL apuntaba a Railway (inactivo)',
+      'Error al registrarse: "application failed to respond"',
+      'Usar v1.3.1 en su lugar',
     ],
   },
   {

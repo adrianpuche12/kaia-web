@@ -231,11 +231,30 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/45de435a-a272-4d3d-b0c4-fbb736a04356',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/ff2a6e14-cbd1-455d-9c4b-0dfdb3ab987e',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'ff2a6e14-cbd1-455d-9c4b-0dfdb3ab987e',
+    version: '1.3.4',
+    buildNumber: 10,
+    date: '2025-11-16',
+    platform: 'Android',
+    size: '88.2 MB',
+    // VERSIÓN ACTUAL - Backend Contabo totalmente funcional
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/ff2a6e14-cbd1-455d-9c4b-0dfdb3ab987e',
+    status: 'stable',
+    notes: [
+      'STABLE: Backend Contabo VPS completamente funcional',
+      'FIX: Base de datos PostgreSQL con credenciales correctas',
+      'usesCleartextTraffic habilitado para permitir HTTP',
+      'API URL configurada: http://62.171.160.238:3003/api',
+      'Registro y login funcionando correctamente',
+      'Tests de autenticación validados (curl)',
+    ],
+  },
   {
     id: '45de435a-a272-4d3d-b0c4-fbb736a04356',
     version: '1.3.3',
@@ -243,15 +262,12 @@ export const RELEASES = [
     date: '2025-11-15',
     platform: 'Android',
     size: '88.2 MB',
-    // VERSIÓN ACTUAL - HTTP cleartext traffic habilitado
     downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/45de435a-a272-4d3d-b0c4-fbb736a04356',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
-      'FIX: usesCleartextTraffic habilitado para permitir HTTP',
-      'Solucionado "network request failed" en Android',
-      'API URL correctamente configurada',
-      'Backend Contabo VPS (http://62.171.160.238:3003)',
-      'Registro y autenticación completamente funcionales',
+      'DEPRECADO: Build anterior a arreglo de base de datos',
+      'Error: "network request failed" por credenciales DB incorrectas',
+      'Usar v1.3.4 en su lugar',
     ],
   },
   {

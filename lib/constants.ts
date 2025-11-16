@@ -231,11 +231,30 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/ff2a6e14-cbd1-455d-9c4b-0dfdb3ab987e',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/f5cf64ea-62a5-442e-86e1-779a88de17e9',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'f5cf64ea-62a5-442e-86e1-779a88de17e9',
+    version: '1.3.5',
+    buildNumber: 11,
+    date: '2025-11-16',
+    platform: 'Android',
+    size: '88.2 MB',
+    // VERSIÓN ACTUAL - FIX Android HTTP blocking
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/f5cf64ea-62a5-442e-86e1-779a88de17e9',
+    status: 'stable',
+    notes: [
+      'FIX CRÍTICO: Network Security Config para permitir HTTP explícitamente',
+      'Android bloqueaba HTTP a pesar de usesCleartextTraffic: true',
+      'networkSecurityConfig añadido para IP 62.171.160.238',
+      'Esto resuelve el error "network request failed"',
+      'Backend Contabo VPS completamente funcional',
+      'API URL: http://62.171.160.238:3003/api',
+    ],
+  },
   {
     id: 'ff2a6e14-cbd1-455d-9c4b-0dfdb3ab987e',
     version: '1.3.4',
@@ -243,16 +262,12 @@ export const RELEASES = [
     date: '2025-11-16',
     platform: 'Android',
     size: '88.2 MB',
-    // VERSIÓN ACTUAL - Backend Contabo totalmente funcional
     downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/ff2a6e14-cbd1-455d-9c4b-0dfdb3ab987e',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
-      'STABLE: Backend Contabo VPS completamente funcional',
-      'FIX: Base de datos PostgreSQL con credenciales correctas',
-      'usesCleartextTraffic habilitado para permitir HTTP',
-      'API URL configurada: http://62.171.160.238:3003/api',
-      'Registro y login funcionando correctamente',
-      'Tests de autenticación validados (curl)',
+      'DEPRECADO: Android bloqueaba HTTP incluso con usesCleartextTraffic',
+      'Error: "network request failed"',
+      'Usar v1.3.5 en su lugar',
     ],
   },
   {

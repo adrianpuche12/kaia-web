@@ -19,9 +19,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-primary">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary opacity-90"></div>
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background gradient overlay con colores Kaia reales */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#4F46E5]"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
@@ -70,8 +70,8 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
+              variant="tertiary"
               size="lg"
-              className="bg-tertiary hover:bg-tertiary-dark text-white shadow-2xl"
               onClick={handleDownload}
             >
               <svg

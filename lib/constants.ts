@@ -170,8 +170,20 @@ export const CHANGELOG = [
     ],
   },
   {
-    version: 'v1.4',
-    date: 'Dec 2025',
+    version: 'v1.5',
+    date: '20 Dec 2025',
+    title: 'Migración Render',
+    status: 'completed',
+    features: [
+      'Backend migrado a Render',
+      'PostgreSQL en Render',
+      'HTTPS con SSL automático',
+      'Mayor estabilidad cloud-native',
+    ],
+  },
+  {
+    version: 'v2.0',
+    date: 'Q1 2026',
     title: 'App Stores',
     status: 'pending',
     features: [
@@ -231,11 +243,31 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/f5cf64ea-62a5-442e-86e1-779a88de17e9',
+  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/41c580a6-3e31-410e-b474-4f155d555b53',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: '41c580a6-3e31-410e-b474-4f155d555b53',
+    version: '1.5.0',
+    buildNumber: 8,
+    date: '2025-12-20',
+    platform: 'Android',
+    size: '89.0 MB',
+    // VERSIÓN ACTUAL - Migración a Render
+    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/41c580a6-3e31-410e-b474-4f155d555b53',
+    status: 'stable',
+    notes: [
+      'Migración completa a Render cloud platform',
+      'Backend URL: https://kaia-backend-3fxx.onrender.com/api',
+      'PostgreSQL en Render con mayor disponibilidad',
+      'HTTPS automático con SSL',
+      'Mejoras de estabilidad y rendimiento',
+      'TypeScript build fixes aplicados',
+      'Mayor escalabilidad cloud-native',
+    ],
+  },
   {
     id: 'f5cf64ea-62a5-442e-86e1-779a88de17e9',
     version: '1.3.5',
@@ -243,16 +275,14 @@ export const RELEASES = [
     date: '2025-11-16',
     platform: 'Android',
     size: '88.2 MB',
-    // VERSIÓN ACTUAL - FIX Android HTTP blocking
+    // DEPRECADA - Railway inactivo
     downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/f5cf64ea-62a5-442e-86e1-779a88de17e9',
-    status: 'stable',
+    status: 'deprecated',
     notes: [
-      'FIX CRÍTICO: Network Security Config para permitir HTTP explícitamente',
-      'Android bloqueaba HTTP a pesar de usesCleartextTraffic: true',
-      'networkSecurityConfig añadido para IP 62.171.160.238',
-      'Esto resuelve el error "network request failed"',
-      'Backend Contabo VPS completamente funcional',
-      'API URL: http://62.171.160.238:3003/api',
+      'DEPRECADO: Backend en Railway ya no está activo',
+      'Network Security Config para permitir HTTP',
+      'Backend Contabo VPS (ya no disponible)',
+      'Usar v1.5.0 en su lugar',
     ],
   },
   {

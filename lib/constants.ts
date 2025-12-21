@@ -243,29 +243,29 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/41c580a6-3e31-410e-b474-4f155d555b53',
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.5.0/kaia-v1.5.0.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
   {
-    id: '41c580a6-3e31-410e-b474-4f155d555b53',
+    id: '259ee8a9-0db7-409e-8423-4de7167b0a1b',
     version: '1.5.0',
-    buildNumber: 8,
-    date: '2025-12-20',
+    buildNumber: 4,
+    date: '2025-12-21',
     platform: 'Android',
-    size: '89.0 MB',
+    size: '88.0 MB',
     // VERSIÓN ACTUAL - Migración a Render
-    downloadUrl: 'https://expo.dev/accounts/adrianpuche/projects/mobile/builds/41c580a6-3e31-410e-b474-4f155d555b53',
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.5.0/kaia-v1.5.0.apk',
     status: 'stable',
     notes: [
       'Migración completa a Render cloud platform',
       'Backend URL: https://kaia-backend-3fxx.onrender.com/api',
-      'PostgreSQL en Render con mayor disponibilidad',
+      'PostgreSQL con Neon DB (serverless)',
+      'Cache con Upstash Redis',
       'HTTPS automático con SSL',
       'Mejoras de estabilidad y rendimiento',
-      'TypeScript build fixes aplicados',
-      'Mayor escalabilidad cloud-native',
+      'GitHub Release oficial disponible',
     ],
   },
   {

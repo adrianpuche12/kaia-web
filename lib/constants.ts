@@ -243,19 +243,41 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.5.0/kaia-v1.5.0.apk',
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.6.0/kaia-v1.6.0.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
   {
+    id: 'd88f9dd4-815e-4aa1-bac2-6f5ba3141087',
+    version: '1.6.0',
+    buildNumber: 9,
+    date: '2025-12-22',
+    platform: 'Android',
+    size: '88.0 MB',
+    // VERSIÓN ACTUAL - AI Voice Processing & TTS
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.6.0/kaia-v1.6.0.apk',
+    status: 'stable',
+    notes: [
+      'AI-Powered Voice Commands con Claude AI',
+      'Sistema TTS natural con ElevenLabs',
+      'AIService completo para procesamiento de voz (+238 líneas)',
+      'ChatScreen rediseñado con mejor UX (+194 líneas)',
+      'AgendaScreen mejorado (+105 líneas)',
+      'Nuevo componente EventDetailModal',
+      'VoiceService robusto (+87 líneas)',
+      'Backend URL: https://kaia-backend-3fxx.onrender.com/api',
+      'Total: +2,530 líneas de código nuevo',
+    ],
+  },
+  {
     id: '259ee8a9-0db7-409e-8423-4de7167b0a1b',
     version: '1.5.0',
-    buildNumber: 4,
+    buildNumber: 8,
     date: '2025-12-21',
     platform: 'Android',
     size: '88.0 MB',
-    // VERSIÓN ACTUAL - Migración a Render
+    // Migración a Render
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.5.0/kaia-v1.5.0.apk',
     status: 'stable',
     notes: [

@@ -243,11 +243,37 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.7.0/kaia-v1.7.0.apk',
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.8.0/kaia-v1.8.0.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: '1f8eb061-70cd-4623-975b-68bdf44c1c1d',
+    version: '1.8.0',
+    buildNumber: 11,
+    date: '2025-12-23',
+    platform: 'Android',
+    size: '91.0 MB',
+    // VERSIÓN ACTUAL - Edit Profile & User Management
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.8.0/kaia-v1.8.0.apk',
+    status: 'stable',
+    notes: [
+      'EditProfileScreen completo con diseño moderno',
+      'Editar nombre, apellido, email, teléfono y fecha de nacimiento',
+      'Validación en tiempo real (formato email/teléfono)',
+      'Detección de cambios (botón Guardar solo activo si hay cambios)',
+      'Confirmación específica mostrando campos modificados',
+      'DatePicker nativo para selección de fecha',
+      'Integración backend con validación de email/teléfono únicos',
+      'Actualización automática de SecureStorage',
+      'Botón "Cambiar Contraseña" preparado para v1.9.0',
+      'ProfileStack navigator (Profile → EditProfile)',
+      'Advertencia al salir con cambios sin guardar',
+      'Backend URL: https://kaia-backend-3fxx.onrender.com/api',
+      'Total: +800 líneas de código nuevo',
+    ],
+  },
   {
     id: '3134f94f-7ad2-4d45-99fa-b659cd0c22b4',
     version: '1.7.0',
@@ -255,7 +281,6 @@ export const RELEASES = [
     date: '2025-12-23',
     platform: 'Android',
     size: '91.0 MB',
-    // VERSIÓN ACTUAL - Profile Screen & Logout Feature
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.7.0/kaia-v1.7.0.apk',
     status: 'stable',
     notes: [

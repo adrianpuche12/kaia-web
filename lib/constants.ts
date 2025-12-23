@@ -243,11 +243,34 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.6.0/kaia-v1.6.0.apk',
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.7.0/kaia-v1.7.0.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: '3134f94f-7ad2-4d45-99fa-b659cd0c22b4',
+    version: '1.7.0',
+    buildNumber: 10,
+    date: '2025-12-23',
+    platform: 'Android',
+    size: '91.0 MB',
+    // VERSIÓN ACTUAL - Profile Screen & Logout Feature
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.7.0/kaia-v1.7.0.apk',
+    status: 'stable',
+    notes: [
+      'ProfileScreen con diseño moderno y gradiente Kaia',
+      'Avatar circular con inicial del usuario',
+      'Información completa del perfil (nombre, email, fecha)',
+      'Menú de configuración preparado para v1.8.0',
+      'Botón de Logout funcional con confirmación',
+      'Tab "Perfil" (👤) en navegación principal',
+      'Gradiente Índigo → Púrpura consistente',
+      'Logo con fuente manuscrita Caveat',
+      'Backend URL: https://kaia-backend-3fxx.onrender.com/api',
+      'Total: +400 líneas de código nuevo',
+    ],
+  },
   {
     id: 'd88f9dd4-815e-4aa1-bac2-6f5ba3141087',
     version: '1.6.0',
@@ -255,7 +278,7 @@ export const RELEASES = [
     date: '2025-12-22',
     platform: 'Android',
     size: '88.0 MB',
-    // VERSIÓN ACTUAL - AI Voice Processing & TTS
+    // AI Voice Processing & TTS
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.6.0/kaia-v1.6.0.apk',
     status: 'stable',
     notes: [

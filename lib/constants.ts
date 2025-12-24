@@ -243,11 +243,37 @@ export const DOWNLOAD_LINKS = {
   playStore: '#', // TODO: Add real Play Store link
   appStore: '#', // iOS coming soon
   // Auto-downloads the latest Android release from GitHub
-  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.8.0/kaia-v1.8.0.apk',
+  apkDirect: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.9.0/kaia-v1.9.0.apk',
 };
 
 // Releases/Available versions
 export const RELEASES = [
+  {
+    id: 'd22cd0ff-85be-4703-91c2-5a1daf0eefcb',
+    version: '1.9.0',
+    buildNumber: 12,
+    date: '2025-12-24',
+    platform: 'Android',
+    size: '90.2 MB',
+    // VERSIÓN ACTUAL - Onboarding Preferences Management
+    downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.9.0/kaia-v1.9.0.apk',
+    status: 'stable',
+    notes: [
+      'OnboardingPreferencesScreen completo con diseño moderno',
+      'Editar intereses personales (10 opciones: deportes, música, tech, comida, viajes, arte, lectura, películas, fitness, gaming)',
+      'Editar categorías favoritas de eventos (5 opciones: médico, trabajo, personal, social, familia)',
+      'Toggle para notificaciones push',
+      'Toggle para seguimiento de ubicación',
+      'Interfaz con chips multi-selección',
+      'Detección de cambios con confirmación',
+      'Advertencia al salir sin guardar cambios',
+      'BUG CRÍTICO RESUELTO: Intereses y categorías ahora se guardan correctamente durante onboarding',
+      'Backend: Patrón upsert implementado para preferencias',
+      'ProfileStack actualizado (Profile → EditProfile → OnboardingPreferences)',
+      'Backend URL: https://kaia-backend-3fxx.onrender.com/api',
+      'Total: +600 líneas de código nuevo',
+    ],
+  },
   {
     id: '1f8eb061-70cd-4623-975b-68bdf44c1c1d',
     version: '1.8.0',
@@ -255,7 +281,7 @@ export const RELEASES = [
     date: '2025-12-23',
     platform: 'Android',
     size: '91.0 MB',
-    // VERSIÓN ACTUAL - Edit Profile & User Management
+    // Edit Profile & User Management
     downloadUrl: 'https://github.com/adrianpuche12/Kaia/releases/download/v1.8.0/kaia-v1.8.0.apk',
     status: 'stable',
     notes: [
